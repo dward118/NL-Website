@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="ContactUsStyle.css">
+    
+  </head>
+  <body>
+    <div id="app">
+      <h1>Contact Us</h1>
+      <form>
+        <div class="form-field">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" v-model="firstName" required>
+        </div>
+        <div class="form-field">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" v-model="lastName" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" v-model="email" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" v-model="phone" required>
+        </div>
+        <div class="form-field">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" v-model="subject" required>
+        </div>
+        <div class="form-field">
+          <label for="body">Body</label>
+          <textarea id="body" v-model="body" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
