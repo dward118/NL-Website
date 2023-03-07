@@ -5,9 +5,9 @@
   <div>
     <h1>Contact Us</h1>
     <div class="field">
-      <input type="text" placeholder="Enter Your First Name" id="first-name" name="firstName" required>
-      <input type="text" placeholder="Enter Your Last Name" id="last-name" name="lastName" required>
-      <input type="email" placeholder="Enter Your Email" id="email" name="email" required>
+      <input type="text" placeholder="Enter Your First Name" id="first-name" name="firstName" required autocomplete="given-name">
+      <input type="text" placeholder="Enter Your Last Name" id="last-name" name="lastName" required autocomplete="family-name">
+      <input type="email" placeholder="Enter Your Email" id="email" name="email" required autocomplete="email">
       <input type="text" placeholder="Enter Subject Line" id="subject" name="subject" required>
       <textarea placeholder="Body" id="body" name="body" required></textarea>
       <button type="submit">Send</button>
