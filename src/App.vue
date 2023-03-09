@@ -6,17 +6,17 @@
 </template>
 
 <script>
-import HomePage from './components/Homepage.vue'
+//import HomePage from './components/Homepage.vue'
 //import LoginPage from './components/LoginPage.vue'
-//import ContactUs from './components/ContactUs.vue'
+import ContactUs from './components/ContactUs.vue'
 //import SignUp from './components/SignUp.vue'
 
 export default {
   name: 'App',
   components:{
-    HomePage,
+    //HomePage,
     //LoginPage,
-    //ContactUs,
+    ContactUs,
     //SignUp,
   }
 }

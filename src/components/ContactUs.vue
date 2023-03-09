@@ -4,19 +4,20 @@
 
   <div>
     <h1>Contact Us</h1>
-    <div class="field">
-      <input type="text" placeholder="Enter Your First Name" id="first-name" name="firstName" required autocomplete="given-name">
-      <input type="text" placeholder="Enter Your Last Name" id="last-name" name="lastName" required autocomplete="family-name">
-      <input type="email" placeholder="Enter Your Email" id="email" name="email" required autocomplete="email">
-      <input type="text" placeholder="Enter Subject Line" id="subject" name="subject" required>
+    <form ref="form" @submit.prevent="sendEmail" class="field">
+      <input type="text" placeholder="Enter Your First Name" name="firstName" required autocomplete="given-name">
+      <input type="text" placeholder="Enter Your Last Name" name="lastName" required autocomplete="family-name">
+      <input type="email" placeholder="Enter Your Email" name="email" required autocomplete="email">
+      <input type="text" placeholder="Enter Subject Line" name="subject" required>
       <textarea placeholder="Body" id="body" name="body" required></textarea>
       <button type="submit">Send</button>
-    </div>  
+    </form>  
   </div>
 </div>
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
 import MenuBarLimited from './MenuBarLimited.vue';
 
 export default {
@@ -31,11 +32,22 @@ export default {
       activeItem: 'Home',
     }
   },
+
+  methods: {
+    sendEmail() {
+      emailjs.sendForm('service_v4pdofo', 'template_dvtn57k', this.$refs.form, 'VFoCuA7pmsGIFz8Ml')
+        .then((result) => {
+            console.log('SUCCESS!', result.text);
+        }, (error) => {
+            console.log('FAILED...', error.text);
+        });
+    }
+  }
 }
 </script>
 
-<style>
 
+<style>
 .field input {
   width: 300px;
   height: 40px;
