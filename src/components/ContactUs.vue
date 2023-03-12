@@ -46,7 +46,6 @@ export default {
 }
 </script>
 
-
 <style>
 .field input {
   width: 300px;
