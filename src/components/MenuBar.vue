@@ -1,72 +1,63 @@
 <template>
-    <div>
-  
-      <div class="menu-container">
-        <div class="title">NucScholar</div>
-          <div class="menu-item" :class="{'active': activeItem === 'Home'}" @click="activeItem = 'Home'">Home</div>
-        <div class="divider"></div>
-        <div class="menu-item" :class="{'active': activeItem === 'Ask a Question'}" @click="activeItem = 'Ask a Question'">Ask a Question</div>
-        <div class="divider"></div>
-        <div class="menu-item" :class="{'active': activeItem === 'Search'}" @click="activeItem = 'Search'">Search</div>
-        <div class="divider"></div>
-          <div class="menu-item" :class="{'active': activeItem === 'Contact Us'}" @click="activeItem = 'Contact Us'">Contact Us</div>
-        <div class="divider"></div>
-          <div class="menu-item" :class="{'active': activeItem === 'My Account'}" @click="activeItem = 'My Account'">My Account</div>
-      </div>
-  
-      </div>
-    </template>
+  <div>
+    <div class="menu-container">
+      <div class="menu-item"><router-link to="/">
+          <div style="font-size: 30px; color: #fac62e; font-weight: bold;">NucScholar</div>
+        </router-link></div>
+      <div class="menu-item">Ask a Question</div>
+      <div class="menu-item">Search</div>
+      <div class="menu-item"><router-link to="/contact-us">Contact Us</router-link></div>
+      <div class="menu-item"><router-link to="/login">Login</router-link></div>
+    </div>
+    <footer style="bottom: 0; position: fixed;">NucScholar is a product of Lawrence Berkeley National Laboaratory &trade;
+      and The Air Force Institute of Technology &trade;</footer>
 
-    <script>
-    export default {
-      name: 'MenuBar',
-  
-      data() {
-        return {
-          activeItem: 'Home'
-        }
-      },
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'MenuBar',
+
+  data() {
+    return {
+      activeItem: 'NucScholar'
     }
-    </script>
+  },
+}
+</script>
     
-    <style scoped>
-    /* Styles for the horizontal menu */
-  .menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #0000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  .menu-item {
-    margin-left: 10px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  /* Style for the active menu item */
-  .active {
-    color: #4CAF50;
-    font-weight: bold;
-  }
-  
-  /* Style for the divider */
-  .divider {
-    height: 1px;
-    width: 10px;
-    background-color: #ccc;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  
-  /* Style for the title */
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 20px;
-  }
-    </style>
+<style scoped>
+/* Styles for the horizontal menu */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #00313c;
+  /*justify-content: space-between;*/
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.menu-item {
+  font-size: 18px;
+  padding: 14px 40px;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.menu-item a {
+  float: left;
+  color: aliceblue;
+  padding: 0px 30px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.menu-item a:hover {
+  color: #fac62e;
+  text-decoration: none;
+}</style>

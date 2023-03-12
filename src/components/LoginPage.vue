@@ -2,11 +2,11 @@
   <div>
     <MenuBarLimited />
 
-    <h1>Login</h1>
+    <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Login</h1>
     <div class="field">
-        <input type="text" placeholder="Enter Username" id="username" name="username" required />
-        <input type="password" placeholder="Enter Password" id="password" name="password" required />
-        <button type="submit">Log in</button>
+      <input type="text" placeholder="Enter Username" id="username" name="username" required />
+      <input type="password" placeholder="Enter Password" id="password" name="password" required />
+      <button type="submit">Log in</button>
     </div>
   </div>
 </template>
@@ -23,14 +23,13 @@ export default {
 
   data() {
     return {
-      activeItem: 'Home',
+      activeItem: 'NucScholar',
     };
   },
 };
 </script>
 
 <style scoped>
-
 .field input {
   width: 300px;
   height: 40px;
@@ -39,14 +38,14 @@ export default {
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid skyblue;
+  border: 1px solid #fac62e;
 }
 
 .field button {
   width: 320px;
   height: 40px;
-  border: 1px solid skyblue;
-  background: skyblue;
+  border: 1px solid #00313c;
+  background: #00313c;
   color: #fff;
   cursor: pointer;
 }
