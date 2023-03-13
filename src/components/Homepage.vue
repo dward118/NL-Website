@@ -1,25 +1,24 @@
 <template>
   <MenuBar />
-  </template>
+</template>
   
-  <script>
-  import MenuBar from './MenuBar.vue';
+<script>
+import MenuBar from './MenuBar.vue';
 
-  export default {
-    name: 'HomePage',
+export default {
+  name: 'HomePage',
 
-    components: {
-      MenuBar
-    },
+  components: {
+    MenuBar
+  },
 
-    data() {
-      return {
-        activeItem: 'Home'
-      }
-    },
-  }
-  </script>
+  data() {
+    return {
+      activeItem: 'NucScholar',
+    }
+  },
+}
+</script>
   
-  <style>
-  </style>
+<style></style>
   
