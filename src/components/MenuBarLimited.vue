@@ -1,53 +1,57 @@
 <template>
-    <div>
-  
-      <div class="menu-container">
-        <div class="title">NucScholar</div>
-          <div class="menu-item" :class="{'active': activeItem === 'Home'}" @click="activeItem = 'Home'">Home</div>
-      </div>
+  <div>
+    <div class="menu-container">
+      <div class="menu-item"><router-link to="/">
+          <div style="font-size: 30px; color: #fac62e; font-weight: bold;">NucScholar</div>
+        </router-link></div>
+      <footer style="bottom: 0; position: fixed;">NucScholar is a product of Lawrence Berkeley National Laboaratory
+        &trade; and The Air Force Institute of Technology &trade;</footer>
     </div>
-  </template>
+  </div>
+</template>
 
-  <script>
+<script>
 export default {
   name: 'MenuBarLimited',
   data() {
     return {
-      activeItem: 'Home',
+      activeItem: 'NucScholar',
     };
   },
 };
 </script>
 
 <style scoped>
-
 /* Styles for the horizontal menu */
 .menu-container {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #0000;
+  right: 0;
+  background-color: #00313c;
+  /*justify-content: space-between;*/
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px;
+  overflow: hidden;
 }
+
 .menu-item {
-  margin-left: 10px;
   font-size: 18px;
+  padding: 14px 40px;
   cursor: pointer;
+  color: aliceblue;
 }
 
-/* Style for the active menu item */
-.active {
-  color: #4CAF50;
-  font-weight: bold;
+.menu-item a {
+  float: left;
+  color: aliceblue;
+  padding: 0px 30px;
+  font-size: 18px;
+  text-decoration: none;
 }
 
-/* Style for the title */
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: 20px;
-}
-</style>
+.menu-item a:hover {
+  color: #fac62e;
+  text-decoration: none;
+}</style>

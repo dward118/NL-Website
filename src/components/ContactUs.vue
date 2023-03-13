@@ -1,9 +1,7 @@
 <template>
-<div>
   <MenuBarLimited />
-
   <div>
-    <h1>Contact Us</h1>
+    <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Contact Us</h1>
     <form ref="form" @submit.prevent="sendEmail" class="field">
       <input type="text" placeholder="Enter Your First Name" name="firstName" required autocomplete="given-name">
       <input type="text" placeholder="Enter Your Last Name" name="lastName" required autocomplete="family-name">
@@ -11,9 +9,8 @@
       <input type="text" placeholder="Enter Subject Line" name="subject" required>
       <textarea placeholder="Body" id="body" name="body" required></textarea>
       <button type="submit">Send</button>
-    </form>  
+    </form>
   </div>
-</div>
 </template>
 
 <script>
@@ -29,7 +26,7 @@ export default {
 
   data() {
     return {
-      activeItem: 'Home',
+      activeItem: 'NucScholar',
     }
   },
 
@@ -55,7 +52,16 @@ export default {
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid skyblue;
+  border: 1px solid #fac62e;
+}
+
+.field button {
+  width: 320px;
+  height: 40px;
+  border: 1px solid #00313c;
+  background: #00313c;
+  color: #fff;
+  cursor: pointer;
 }
 
 .field textarea {
@@ -66,15 +72,6 @@ export default {
   margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid skyblue;
-}
-
-.field button {
-  width: 320px;
-  height: 40px;
-  border: 1px solid skyblue;
-  background: skyblue;
-  color: #fff;
-  cursor: pointer;
+  border: 1px solid #fac62e;
 }
 </style>
