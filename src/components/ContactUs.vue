@@ -1,22 +1,20 @@
 <template>
   <div>
     <MenuBarLimited />
-
-    <div>
-      <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Contact Us</h1>
-      <div class="field">
-        <input type="text" placeholder="Enter Your First Name" id="first-name" name="firstName" required>
-        <input type="text" placeholder="Enter Your Last Name" id="last-name" name="lastName" required>
-        <input type="email" placeholder="Enter Your Email" id="email" name="email" required>
-        <input type="text" placeholder="Enter Subject Line" id="subject" name="subject" required>
-        <textarea placeholder="Body" id="body" name="body" required></textarea>
-        <button type="submit">Send</button>
-      </div>
-    </div>
+    <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Contact Us</h1>
+    <form ref="form" @submit.prevent="sendEmail" class="field">
+      <input type="text" placeholder="Enter Your First Name" name="firstName" required autocomplete="given-name">
+      <input type="text" placeholder="Enter Your Last Name" name="lastName" required autocomplete="family-name">
+      <input type="email" placeholder="Enter Your Email" name="email" required autocomplete="email">
+      <input type="text" placeholder="Enter Subject Line" name="subject" required>
+      <textarea placeholder="Body" id="body" name="body" required></textarea>
+      <button type="submit">Send</button>
+    </form>
   </div>
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
 import MenuBarLimited from './MenuBarLimited.vue';
 
 export default {
@@ -31,6 +29,17 @@ export default {
       activeItem: 'NucScholar',
     }
   },
+
+  methods: {
+    sendEmail() {
+      emailjs.sendForm('service_v4pdofo', 'template_dvtn57k', this.$refs.form, 'VFoCuA7pmsGIFz8Ml')
+        .then((result) => {
+            console.log('SUCCESS!', result.text);
+        }, (error) => {
+            console.log('FAILED...', error.text);
+        });
+    }
+  }
 }
 </script>
 
