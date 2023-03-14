@@ -13,11 +13,6 @@
 <script>
 export default {
   name: 'MenuBarLimited',
-  data() {
-    return {
-      activeItem: 'NucScholar',
-    };
-  },
 };
 </script>
 

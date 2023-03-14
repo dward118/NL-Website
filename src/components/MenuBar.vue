@@ -18,12 +18,6 @@
 <script>
 export default {
   name: 'MenuBar',
-
-  data() {
-    return {
-      activeItem: 'NucScholar'
-    }
-  },
 }
 </script>
     

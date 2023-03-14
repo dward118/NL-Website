@@ -20,12 +20,6 @@ export default {
   components: {
     MenuBarLimited
   },
-
-  data() {
-    return {
-      activeItem: 'NucScholar',
-    };
-  },
 };
 </script>
 
