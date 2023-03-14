@@ -13,11 +13,6 @@
 <script>
 export default {
   name: 'MenuBarLimited',
-  data() {
-    return {
-      activeItem: 'NucScholar',
-    };
-  },
 };
 </script>
 
@@ -31,7 +26,6 @@ export default {
   background-color: #00313c;
   /*justify-content: space-between;*/
   display: flex;
-  align-items: center;
   padding: 10px;
   overflow: hidden;
 }

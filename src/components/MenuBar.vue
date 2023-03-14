@@ -4,8 +4,8 @@
       <div class="menu-item"><router-link to="/">
           <div style="font-size: 30px; color: #fac62e; font-weight: bold;">NucScholar</div>
         </router-link></div>
-      <div class="menu-item">Ask a Question</div>
-      <div class="menu-item">Search</div>
+      <div class="menu-item"><router-link to="/question">Ask a Question</router-link></div>
+      <div class="menu-item"><router-link to="/semantic">Search</router-link></div>
       <div class="menu-item"><router-link to="/contact-us">Contact Us</router-link></div>
       <div class="menu-item"><router-link to="/login">Login</router-link></div>
     </div>
@@ -18,12 +18,6 @@
 <script>
 export default {
   name: 'MenuBar',
-
-  data() {
-    return {
-      activeItem: 'NucScholar'
-    }
-  },
 }
 </script>
     
@@ -37,7 +31,6 @@ export default {
   background-color: #00313c;
   /*justify-content: space-between;*/
   display: flex;
-  align-items: center;
   padding: 10px;
   overflow: hidden;
 }

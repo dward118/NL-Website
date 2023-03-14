@@ -24,12 +24,6 @@ export default {
     MenuBarLimited
   },
 
-  data() {
-    return {
-      activeItem: 'NucScholar',
-    }
-  },
-
   methods: {
     sendEmail() {
       emailjs.sendForm('service_v4pdofo', 'template_dvtn57k', this.$refs.form, 'VFoCuA7pmsGIFz8Ml')

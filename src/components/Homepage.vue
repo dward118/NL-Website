@@ -11,14 +11,9 @@ export default {
   components: {
     MenuBar
   },
-
-  data() {
-    return {
-      activeItem: 'NucScholar',
-    }
-  },
 }
 </script>
   
-<style></style>
+<style>
+</style>
   
