@@ -1,15 +1,15 @@
 <template>
-    <MenuBar />
+    <MenuBarLimited />
 </template>
     
 <script>
-import MenuBar from './MenuBar.vue';
+import MenuBarLimited from './MenuBarLimited.vue';
 
 export default {
     name: 'SemanticSearch',
 
     components: {
-        MenuBar
+        MenuBarLimited
     },
 }
 </script>

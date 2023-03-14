@@ -7,6 +7,9 @@
       <input type="text" placeholder="Enter Username" id="username" name="username" required />
       <input type="password" placeholder="Enter Password" id="password" name="password" required />
       <button type="submit">Log in</button>
+      <p>
+        <router-link to="/sign-up">Don't have an account? Sign up here.</router-link>
+      </p>
     </div>
   </div>
 </template>
@@ -42,5 +45,9 @@ export default {
   background: #00313c;
   color: #fff;
   cursor: pointer;
+}
+
+p {
+  text-align: center;
 }
 </style>
