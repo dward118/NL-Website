@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import MenuBarLimited from './MenuBarLimited.vue';
+import MenuBarLimited from '../components/MenuBarLimited.vue';
 
 export default {
   name: 'SignUp',

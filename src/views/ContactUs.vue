@@ -15,7 +15,7 @@
 
 <script>
 import emailjs from '@emailjs/browser';
-import MenuBarLimited from './MenuBarLimited.vue';
+import MenuBarLimited from '../components/MenuBarLimited.vue';
 
 export default {
   name: 'ContactUs',
