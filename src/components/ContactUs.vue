@@ -60,7 +60,7 @@ export default {
 
 .field textarea {
   width: 300px;
-  height: 40px;
+  height: 100px;
   padding-left: 20px;
   display: block;
   margin-bottom: 30px;
