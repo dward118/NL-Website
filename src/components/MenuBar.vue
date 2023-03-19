@@ -49,14 +49,14 @@ export default {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   background: #00313c;
-  height: auto;
+  height: fit-content;
   width: 100vw;
-  padding-top: 20px;
+  padding-top: 10px;
   color: aliceblue;
   font-size: large;
 }
