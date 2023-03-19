@@ -14,6 +14,7 @@
 </template>
 
 <script>
+
 import emailjs from '@emailjs/browser';
 import MenuBarLimited from './MenuBarLimited.vue';
 

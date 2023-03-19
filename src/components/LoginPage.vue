@@ -8,6 +8,10 @@
       <input type="password" placeholder="Enter Password" id="password" name="password" required />
       <button type="submit">Log in</button>
     </div>
+    <p>
+      <router-link to="/sign-up">SignUp</router-link>
+      </p>
+
   </div>
 </template>
 
