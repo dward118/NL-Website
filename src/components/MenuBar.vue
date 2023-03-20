@@ -8,12 +8,10 @@
     <a><router-link to="/login">Login</router-link></a>
   </div>
   <footer>
-    <div class="footer-content">
-      <p class="footerStyle">
-        NucScholar is a product of Lawrence Berkeley National Laboaratory &trade;
-        and The Air Force Institute of Technology &trade;
-      </p>
-    </div>
+    <p class="footerStyle">
+      NucScholar is a product of Lawrence Berkeley National Laboratory &trade;
+      and The Air Force Institute of Technology &trade;
+    </p>
   </footer>
 </template>
 
@@ -32,6 +30,7 @@ export default {
   right: 0;
   background-color: #00313c;
   overflow: hidden;
+  border: 2px solid#fac62e;
 }
 
 .menu-item a {
@@ -41,7 +40,7 @@ export default {
   padding: 14px 16px;
   font-size: 18px;
   text-decoration: none;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .menu-item a:hover {
@@ -52,24 +51,15 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0;
   background: #00313c;
   height: fit-content;
-  width: 100vw;
-  padding-top: 10px;
-  color: aliceblue;
-  font-size: large;
-}
-
-footer-content {
-  text-align: center;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  width: 99vw;
+  border: 2px solid#fac62e;
 }
 
 .footerStyle {
+  color: aliceblue;
   text-align: center;
+  font-size: large;
 }
 </style>

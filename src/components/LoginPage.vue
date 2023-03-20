@@ -45,6 +45,7 @@ export default {
   background: #00313c;
   color: #fff;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 p {

@@ -2,7 +2,7 @@
   <MenuBar />
 
   <div>
-    <h3 style="font-size:40px; color: #00313c; margin-top: 150px;">NucScholar Search Engine</h3>
+    <h3 style="font-size:40px; color: #00313c; margin-top: 150px; margin-bottom: 80px;">NucScholar Search Engine</h3>
     <p>
       Created by Walid Younes and Bethany Goldblum at the Lawrence Berkeley National Laboratory and Juan Manfredi at the
       Air Force Institute of Technology. Please report any problems to Walid Younes.
@@ -21,10 +21,13 @@
     </p>
   </div>
 
-  <h1 style="color: #fac62e; margin-top: 75px; margin-bottom: 100px;">News</h1>
+  <h1 style="color: #fac62e; margin-top: 75px; margin-bottom: 30px; font-size: 35px;">News</h1>
   <div class="news-container">
     No news to display. Check back later!
   </div>
+
+  <!-- This is to create whitespace at the bottom until we have other containers. -->
+  <div style="height: 200px;"></div>
 </template>
   
 <script>
