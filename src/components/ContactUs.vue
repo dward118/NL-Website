@@ -24,12 +24,6 @@ export default {
     MenuBarLimited
   },
 
-  data() {
-    return {
-      activeItem: 'NucScholar',
-    }
-  },
-
   methods: {
     sendEmail() {
       emailjs.sendForm('service_v4pdofo', 'template_dvtn57k', this.$refs.form, 'VFoCuA7pmsGIFz8Ml')
@@ -66,7 +60,7 @@ export default {
 
 .field textarea {
   width: 300px;
-  height: 40px;
+  height: 100px;
   padding-left: 20px;
   display: block;
   margin-bottom: 30px;
