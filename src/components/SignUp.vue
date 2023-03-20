@@ -9,10 +9,11 @@
       <input type="text" v-model="username" placeholder="Enter Username" id="username" name="username" required />
       <input type="password"  v-model="password"  placeholder="Enter Password" id="password" name="password" required />
       <button type="submit" v-on:click="signUp" >Submit</button>
-    </div>
-    <p>
+      <br />
+      <br />
       <router-link to="/login">Login</router-link>
-      </p>
+
+    </div>
 
   </div>
 </template>

@@ -4,30 +4,28 @@
 
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Login</h1>
     <div class="field">
-      <input type="text" placeholder="Enter Username" id="username" name="username" required />
-      <input type="password" placeholder="Enter Password" id="password" name="password" required />
-      <button type="submit">Log in</button>
-      <p>
-        <router-link to="/sign-up">Don't have an account? Sign up here.</router-link>
-      </p>
-    </div>
-    <p>
+      <input type="text" v-model="username"  placeholder="Enter Username" id="username" name="username" required />
+      <input type="password"  v-model="password"   placeholder="Enter Password" id="password" name="password" required />
+      <button type="submit" v-on:click="login">Log in</button>
+      <br />
+      <br />
       <router-link to="/sign-up">SignUp</router-link>
-      </p>
+    </div>
+
 
   </div>
 </template>
 
 <script>
 import MenuBarLimited from './MenuBarLimited.vue';
-
 export default {
   name: 'LoginPage',
 
   get(){
     return{
       username:'',
-      password:''
+      password:'',
+ 
     }
   },
   methods:{
@@ -37,8 +35,9 @@ export default {
       //  username:this.username,
      //   password:this.password
      // });
-
+      this 
       console.warn(this.username, this.password);
+      
 
       //if (result.status == 201){
        // alert("sign-up done")
@@ -52,6 +51,12 @@ export default {
   
   components: {
     MenuBarLimited
+  },
+
+  data() {
+    return {
+      activeItem: 'NucScholar',
+    };
   },
 };
 </script>
@@ -75,10 +80,5 @@ export default {
   background: #00313c;
   color: #fff;
   cursor: pointer;
-  margin-bottom: 10px;
-}
-
-p {
-  text-align: center;
 }
 </style>
