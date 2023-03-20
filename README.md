@@ -1,6 +1,24 @@
 # NucScholar
 
 ## How to Run
+### .env
+```
+DATABASE_DATABASE=
+DATABASE_USER=
+DATABASE_HOST=
+DATABASE_PORT=
+DATABASE_PASSWORD=
+
+#postgres container
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+
+#pgadmin container
+PGADMIN_DEFAULT_EMAIL=
+PGADMIN_DEFAULT_PASSWORD=
+PGADMIN_PORT=8088
+```
+
 ### Frontend
 1. `cd frontend`
 2. `npm install`
