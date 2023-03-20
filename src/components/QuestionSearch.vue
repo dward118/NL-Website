@@ -1,6 +1,6 @@
 <template>
   <MenuBarLimited />
-  <div style="margin-top: 130px">
+  <div class="question-search">
     <p>
       This app will let you query a small database of arXiv articles on fission.
       The database consists of 71708 individual sentences automatically
@@ -39,4 +39,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.question-search {
+  margin-top: 130px;
+}
+</style>

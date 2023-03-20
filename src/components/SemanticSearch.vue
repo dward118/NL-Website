@@ -1,6 +1,6 @@
 <template>
   <MenuBarLimited />
-  <div style="margin-top: 130px">
+  <div class="semantic-search">
     <p>
       This app will let you query a small database of arXiv articles on fission.
       The database consists of 71708 individual sentences automatically
@@ -9,7 +9,7 @@
     <p>
       The search engine will attempt to return sentences from the database that
       are semantically related to your query. For example, try: fission fragment
-      detectors
+      detectors.
     </p>
     <input v-model="fullName" placeholder="Enter name" />
     <button @click="greet">Submit</button>
@@ -38,4 +38,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.semantic-search {
+  margin-top: 130px;
+}
+</style>
