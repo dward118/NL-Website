@@ -39,12 +39,20 @@ export default {
       //  username:this.username,
      //   password:this.password
      // });
-      
-      this.LoginStatus = true;
+     this.LoginStatus = true;
+
+      if (this.LoginStatus){
       console.warn(this.username, this.password);
       console.warn(this.LoginStatus);
       window.location.href = "http://localhost:8081/"
+      } else{
 
+        alert('Invalid username/password')
+  .then(() => {
+    console.log("Alert dialog closed.");
+  });
+
+      }
 
       //if (result.status == 201){
        // alert("sign-up done")
