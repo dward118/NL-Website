@@ -4,9 +4,12 @@
 
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Login</h1>
     <div class="field">
-      <input type="text" v-model="username"  placeholder="Enter Username" id="username" name="username" required />
-      <input type="password"  v-model="password"   placeholder="Enter Password" id="password" name="password" required />
-      <button type="submit" v-on:click="login">Log in</button>
+      <input type="text" placeholder="Enter Username" id="username" name="username" required />
+      <input type="password" placeholder="Enter Password" id="password" name="password" required />
+      <button type="submit">Log in</button>
+      <p>
+        <router-link to="/sign-up">Don't have an account? Sign up here.</router-link>
+      </p>
     </div>
     <p>
       <router-link to="/sign-up">SignUp</router-link>
@@ -50,12 +53,6 @@ export default {
   components: {
     MenuBarLimited
   },
-
-  data() {
-    return {
-      activeItem: 'NucScholar',
-    };
-  },
 };
 </script>
 
@@ -78,5 +75,10 @@ export default {
   background: #00313c;
   color: #fff;
   cursor: pointer;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
 }
 </style>

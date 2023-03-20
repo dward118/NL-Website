@@ -3,6 +3,8 @@ import HomePage from './components/Homepage.vue';
 import LoginPage from './components/LoginPage.vue';
 import ContactUs from './components/ContactUs.vue';
 import SignUp from './components/SignUp.vue';
+import QuestionSearch from './components/QuestionSearch.vue';
+import SemanticSearch from './components/SemanticSearch.vue';
 
 const routes = [
     {
@@ -24,6 +26,16 @@ const routes = [
         name: "ContactUs",
         component: ContactUs,
         path: "/contact-us",
+    },
+    {
+        name: "QuestionSearch",
+        component: QuestionSearch,
+        path: "/question",
+    },
+    {
+        name: "SemanticSearch",
+        component: SemanticSearch,
+        path: "/semantic",
     },
 ];
 

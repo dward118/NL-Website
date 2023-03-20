@@ -53,12 +53,6 @@ export default {
   components: {
     MenuBarLimited
   },
-
-  data() {
-    return {
-      activeItem: 'Home',
-    };
-  },
 };
 </script>
 
