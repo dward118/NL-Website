@@ -13,11 +13,14 @@
     </div>
 
 
+
   </div>
 </template>
 
 <script>
 import MenuBarLimited from './MenuBarLimited.vue';
+
+
 export default {
   name: 'LoginPage',
 
@@ -25,6 +28,7 @@ export default {
     return{
       username:'',
       password:'',
+      LoginStatus:false
  
     }
   },
@@ -35,9 +39,12 @@ export default {
       //  username:this.username,
      //   password:this.password
      // });
-      this 
-      console.warn(this.username, this.password);
       
+      this.LoginStatus = true;
+      console.warn(this.username, this.password);
+      console.warn(this.LoginStatus);
+      window.location.href = "http://localhost:8081/"
+
 
       //if (result.status == 201){
        // alert("sign-up done")
@@ -46,6 +53,7 @@ export default {
 
     }
   },
+
 
 
   
