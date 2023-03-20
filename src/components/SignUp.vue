@@ -3,11 +3,14 @@
     <MenuBarLimited />
 
    
-    <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Sign Up</h1>
+    <h1 style="font-size:40px; color: #00313c; margin-top: 150px;">Sign Up</h1>
     <div class="field">
-      <input type="email" v-model="email" placeholder="Enter Your Email" id="email" name="email" required>
+      <input type="email" v-model="email" placeholder="Enter Your Email" id="email" name="email" required />
       <input type="text" v-model="username" placeholder="Enter Username" id="username" name="username" required />
       <input type="password"  v-model="password"  placeholder="Enter Password" id="password" name="password" required />
+      <input type="text"  v-model="school"  placeholder="Enter School" id="school" name="school" required />
+      <input type="experience"  v-model="experience"  placeholder="Enter Experience" id="experience" name="experience" required />
+
       <button type="submit" v-on:click="signUp" >Submit</button>
       <br />
       <br />
