@@ -11,7 +11,7 @@
       are semantically related to your query.
     </p>
 
-    <input v-model="SearchBar" placeholder="fission fragment detectors" />
+    <input v-model="SearchBar" placeholder="Ex: fission fragment detectors" />
 
     <button @click="Search">Submit</button>
   </div>

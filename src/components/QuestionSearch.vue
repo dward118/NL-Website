@@ -13,7 +13,7 @@
 
     <input
       v-model="SearchBar"
-      placeholder="What model is used to calculate tunneling"
+      placeholder="Ex: What model is used to calculate tunneling?"
     />
 
     <button @click="Search">Submit</button>
