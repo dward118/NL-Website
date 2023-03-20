@@ -26,7 +26,6 @@ export default {
   right: 0;
   background-color: #00313c;
   overflow: hidden;
-  border: 2px solid#fac62e;
 }
 
 .menu-item a {
@@ -49,8 +48,7 @@ footer {
   left: 0;
   background: #00313c;
   height: fit-content;
-  width: 99vw;
-  border: 2px solid#fac62e;
+  width: 100%;
 }
 
 .footerStyle {
