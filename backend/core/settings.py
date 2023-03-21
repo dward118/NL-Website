@@ -27,7 +27,16 @@ SECRET_KEY = environ['DJANGO_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = []
-
+CORS_ALLOWED_ORGIGINS = ['http://localhost:8080, http://127.0.0.1:8080']
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        
+    ),
+    'DEFAULT_PERMISSION_CLASSES': {
+        'rest_framework.permissions.isAuthenticated'
+    }
+}
 
 # Application definition
 INSTALLED_APPS = [
@@ -38,9 +47,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'corsheaders',
+    'djoser',
     'rest_framework',
     'rest_framework.authtoken',
-
+    
     'users',
 ]
 
@@ -52,6 +63,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'core.urls'

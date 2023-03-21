@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import MenuBarLimited from '../components/MenuBarLimited.vue';
 
 export default {
