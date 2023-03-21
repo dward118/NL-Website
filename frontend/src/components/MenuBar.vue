@@ -5,7 +5,7 @@
     <a><router-link to="/question">Ask a Question</router-link></a>
     <a><router-link to="/semantic">Search by Meaning</router-link></a>
     <a><router-link to="/contact-us">Contact Us</router-link></a>
-    <a><router-link to="/login">Login</router-link></a>
+    <a><router-link to="/Sign-in">Login</router-link></a>
   </div>
   <footer>
     <p class="footerStyle">

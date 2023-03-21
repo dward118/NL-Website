@@ -18,7 +18,7 @@
 import MenuBarLimited from '../components/MenuBarLimited.vue';
 
 export default {
-  name: 'LoginPage',
+  name: 'SignIn',
 
   components: {
     MenuBarLimited
