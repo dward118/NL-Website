@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomePage from '../views/Homepage.vue';
-import LoginPage from '../views/LoginPage.vue';
-import ContactUs from '../views/ContactUs.vue';
-import SignUp from '../views/SignUp.vue';
-import QuestionSearch from '../views/QuestionSearch.vue';
-import SemanticSearch from '../views/SemanticSearch.vue';
+import HomePage from './views/Homepage.vue';
+import LoginPage from './views/LoginPage.vue';
+import ContactUs from './views/ContactUs.vue';
+import SignUp from './views/SignUp.vue';
+import QuestionSearch from './views/QuestionSearch.vue';
+import SemanticSearch from './views/SemanticSearch.vue';
 
 const routes = [
     {
