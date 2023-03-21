@@ -1,4 +1,4 @@
-import { createStore } from vuex
+import { createStore } from 'vuex'
 
 export default createStore({
     state: {
@@ -18,7 +18,7 @@ export default createStore({
         },
         setToken(state, token) {
             state.token = token
-            state.isAuthenticated = True
+            state.isAuthenticated = true
         },
         removeToken(state) {
             state.token = ''

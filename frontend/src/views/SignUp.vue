@@ -5,9 +5,9 @@
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Sign Up</h1>
     <div class="field">
       <form @submit.prevent="submitForm">
-        <input type="email" placeholder="Enter Your Email" id="email" name="email" required>
-        <input type="text" placeholder="Enter Username" id="username" name="username" required />
-        <input type="password" placeholder="Enter Password" id="password" name="password" required />
+        <input type="email" placeholder="Enter Your Email" name="email" v-model="email" required>
+        <input type="text" placeholder="Enter Username" name="username" v-model="username" required />
+        <input type="password" placeholder="Enter Password" name="password" v-model="password" required />
         <button type="submit">Submit</button>
       </form>
     </div>
@@ -16,7 +16,7 @@
 
 <script>
 import axios from 'axios'
-import { response } from 'express';
+// import { response } from 'express';
 import MenuBarLimited from '../components/MenuBarLimited.vue';
 
 export default {
@@ -35,10 +35,12 @@ export default {
   methods: {
     submitForm(e) {
       const formData = {
-        email: this.email,
+        // email: this.email,
         username: this.username,
         password: this.password
       }
+
+      console.log(formData)
 
       axios
         .post('/api/v1/users/', formData)
@@ -48,7 +50,8 @@ export default {
           console.log(response)
         })
         .catch(error => {
-          console.error(error)
+          console.log(error)
+          console.log(e)
         })
     }
   }

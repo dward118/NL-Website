@@ -4,6 +4,7 @@
 
 <script>
 import axios from 'axios'
+// import store from './store'
 
 export default {
   name: 'App',
@@ -16,7 +17,7 @@ export default {
       axios.defaults.headers.common['Authorization'] = "Token " + token
   
     } else {
-      axios.defaults.headers.common['Authorization'] = ""
+      axios.defaults.headers.common['Authorization'] = ''
     }
   }
 }
