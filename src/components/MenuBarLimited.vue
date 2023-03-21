@@ -26,6 +26,7 @@ export default {
   right: 0;
   background-color: #00313c;
   overflow: hidden;
+  border: 2px solid#fac62e;
 }
 
 .menu-item a {
@@ -48,12 +49,13 @@ footer {
   left: 0;
   background: #00313c;
   height: fit-content;
-  width: 100%;
+  width: 100vw;
+  border: 2px solid#fac62e;
 }
 
 .footerStyle {
   color: aliceblue;
   text-align: center;
-  font-size: large;
+  font-size: small;
 }
 </style>
