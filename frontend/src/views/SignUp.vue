@@ -35,7 +35,7 @@ export default {
   methods: {
     submitForm(e) {
       const formData = {
-        // email: this.email,
+        email: this.email,
         username: this.username,
         password: this.password
       }
