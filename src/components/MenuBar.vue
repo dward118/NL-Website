@@ -1,11 +1,28 @@
 <template>
-  <div class="menu-item">
-    <a><router-link to="/" style="font-size: 30px; color: #fac62e; font-weight: bold;"
-        onmouseover="this.style.color='aliceblue'" onmouseout="this.style.color='#fac62e'">NucScholar</router-link></a>
-    <a><router-link to="/question">Ask a Question</router-link></a>
-    <a><router-link to="/semantic">Search by Meaning</router-link></a>
-    <a><router-link to="/contact-us">Contact Us</router-link></a>
-    <a><router-link to="/login">My Account</router-link></a>
+  <div>
+    <div class="menu-container">
+      <div class="menu-item">
+        <router-link to="/">
+          <div style="font-size: 30px; color: #fac62e; font-weight: bold">
+            NucScholar
+          </div>
+        </router-link>
+      </div>
+      <div class="menu-item">
+        <router-link to="/question">Ask a Question</router-link>
+      </div>
+      <div class="menu-item">
+        <router-link to="/semantic">Search</router-link>
+      </div>
+      <div class="menu-item">
+        <router-link to="/contact-us">Contact Us</router-link>
+      </div>
+      <div class="menu-item"><router-link to="/login">Login</router-link></div>
+    </div>
+    <footer style="bottom: 0; position: fixed">
+      NucScholar is a product of Lawrence Berkeley National Laboratory &trade;
+      and The Air Force Institute of Technology &trade;
+    </footer>
   </div>
   <footer>
     <p class="footerStyle">
@@ -17,10 +34,10 @@
 
 <script>
 export default {
-  name: 'MenuBar',
-}
+  name: "MenuBar",
+};
 </script>
-    
+
 <style scoped>
 /* Styles for the horizontal menu */
 .menu-item {
