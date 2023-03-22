@@ -24,6 +24,12 @@
       and The Air Force Institute of Technology &trade;
     </footer>
   </div>
+  <footer>
+    <p class="footerStyle">
+      NucScholar is a product of Lawrence Berkeley National Laboratory &trade;
+      and The Air Force Institute of Technology &trade;
+    </p>
+  </footer>
 </template>
 
 <script>
@@ -34,35 +40,43 @@ export default {
 
 <style scoped>
 /* Styles for the horizontal menu */
-.menu-container {
+.menu-item {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: #00313c;
-  /*justify-content: space-between;*/
-  display: flex;
-  padding: 10px;
   overflow: hidden;
-}
-
-.menu-item {
-  font-size: 18px;
-  padding: 14px 40px;
-  cursor: pointer;
-  color: aliceblue;
+  border: 2px solid#fac62e;
 }
 
 .menu-item a {
   float: left;
   color: aliceblue;
-  padding: 0px 30px;
+  text-align: center;
+  padding: 14px 16px;
   font-size: 18px;
   text-decoration: none;
+  margin-right: 10px;
 }
 
 .menu-item a:hover {
   color: #fac62e;
-  text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #00313c;
+  height: fit-content;
+  width: 100vw;
+  border: 2px solid#fac62e;
+}
+
+.footerStyle {
+  color: aliceblue;
+  text-align: center;
+  font-size: small;
 }
 </style>
