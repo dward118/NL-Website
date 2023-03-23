@@ -4,12 +4,14 @@
 
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Sign Up</h1>
     <div class="field">
-      <form @submit.prevent="submitForm">
-        <input type="email" placeholder="Enter Your Email" name="email" v-model="email" required>
-        <input type="text" placeholder="Enter Username" name="username" v-model="username" required />
-        <input type="password" placeholder="Enter Password" name="password" v-model="password" required />
-        <input type="text" placeholder="Enter Username" name="username" v-model="username" required />
-        <input type="text" placeholder="Enter Username" name="username" v-model="username" required />
+      <form @submit.prevent="submitForm" autocomplete="on">
+        <input type="text"     placeholder="First Name"       v-model="first_name"   autocomplete="given-name" required/>
+        <input type="text"     placeholder="Last Name"        v-model="last_name"   autocomplete="family-name" required/>
+        <input type="text"     placeholder="Username"         v-model="username"    autocomplete="username" required/>
+        <input type="email"    placeholder="Email"            v-model="email"       autocomplete="email" required/>
+        <input type="password" placeholder="Password"         v-model="password"    autocomplete="new-password" required/>
+        <input type="text"     placeholder="Institution"      v-model="institution" autocomplete="organization" required/>
+        <input type="range"    placeholder="Experience Level" v-model="experience" required min="0" max="5"/>
         <button type="submit">Submit</button>
       </form>
       <p>
@@ -22,7 +24,7 @@
 
 <script>
 import axios from 'axios'
-// import { response } from 'express';
+
 import MenuBar from '../components/MenuBar.vue';
 
 export default {
@@ -33,19 +35,25 @@ export default {
   },
   data() {
     return {
-      email: '',
-      username: '',
-      password: '',
+      first_name: "",
+      last_name: "",
+      username: "",
+      email: "",
+      password: "",
+      institution: "",
+      experience: ""
     }
   },
   methods: {
     submitForm(e) {
       const formData = {
-        // first_name: "testname",
-        // last_name: "lastname",
-        email: this.email,
+        first_name: this.first_name.capitalize(),
+        last_name: this.last_name,
         username: this.username,
-        password: this.password
+        email: this.email,
+        password: this.password,
+        institution: this.institution,
+        experience: this.experience
       }
 
       console.log(formData)
@@ -54,7 +62,7 @@ export default {
         .post('/api/v1/users/', formData)
         .then(response => {
 
-          this.$router.push('/sign-in')
+          this.$router.push('/login')
           console.log(response)
         })
         .catch(error => {
