@@ -37,6 +37,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     )
 }
+AUTH_USER_MODEL = "user.User"
 
 # Application definition
 INSTALLED_APPS = [
@@ -51,6 +52,8 @@ INSTALLED_APPS = [
     'djoser',
     'rest_framework',
     'rest_framework.authtoken',
+
+    'user',
 ]
 
 MIDDLEWARE = [
