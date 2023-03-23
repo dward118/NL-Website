@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import MenuBar from './MenuBar.vue';
+import MenuBar from '../components/MenuBar.vue';
 
 
 export default {
-  name: 'LoginPage',
+  name: 'SignIn',
 
   get(){
     return{
@@ -42,6 +42,8 @@ export default {
       //  username:this.username,
      //   password:this.password
      // });
+
+     //None of this is right
      this.LoginStatus = true;
 
       if (this.LoginStatus){
@@ -99,5 +101,6 @@ export default {
   background: #00313c;
   color: #fff;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 </style>

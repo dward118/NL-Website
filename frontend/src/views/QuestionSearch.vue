@@ -7,25 +7,29 @@
       extracted from 108 articles.
     </p>
     <p>
-      The search engine will attempt to return sentences from the database that
-      are semantically related to your query.
+      The search engine will attempt to return short phrases from the database
+      that most closely answer your question.
     </p>
 
-    <input v-model="SearchBar" placeholder="Ex: fission fragment detectors" />
+    <input
+      v-model="SearchBar"
+      placeholder="Ex: What model is used to calculate tunneling?"
+    />
 
     <button @click="Search">Submit</button>
   </div>
 </template>
 
 <script>
-import MenuBar from "./MenuBar.vue";
+import MenuBar from "../components/MenuBar.vue";
 
 export default {
-  name: "SemanticSearch",
+  name: "QuestionSearch",
 
   components: {
     MenuBar,
   },
+
   data() {
     return {
       SearchBar: "",

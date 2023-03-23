@@ -31,7 +31,7 @@
 </template>
   
 <script>
-import MenuBar from './MenuBar.vue';
+import MenuBar from '../components/MenuBar.vue';
 
 export default {
   name: 'HomePage',
