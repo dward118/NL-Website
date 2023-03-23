@@ -1,20 +1,18 @@
 <template>
   <MenuBar />
-  <h1 style="font-size:40px; color: #00313c; margin-top: 150px;">Question Search</h1>
-  <div class="field" style="margin-top: 130px">
+  <h1 style="font-size:40px; color: #00313c; margin-top: 150px; margin-bottom: 80px;">Question Search</h1>
+  <div class="field">
     <p>
       This app will let you query a small database of arXiv articles on fission.
       The database consists of 71708 individual sentences automatically
-      extracted from 108 articles.
     </p>
     <p>
-      The search engine will attempt to return short phrases from the database
+      extracted from 108 articles. The search engine will attempt to return short phrases from the database
       that most closely answer your question.
     </p>
 
     <input
-      v-model="SearchBar"
-      placeholder="Ex: What model is used to calculate tunneling?"
+      v-model="SearchBar" style="margin-top: 50px;" placeholder="Ex: What model is used to calculate tunneling?"
     />
 
     <button @click="Search">Submit</button>

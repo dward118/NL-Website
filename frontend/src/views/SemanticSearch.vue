@@ -1,18 +1,17 @@
 <template>
   <MenuBar />
-  <h1 style="font-size:40px; color: #00313c; margin-top: 150px;">Semantic Search</h1>
-  <div class="field" style="margin-top: 130px">
+  <h1 style="font-size:40px; color: #00313c; margin-top: 150px; margin-bottom: 80px;">Semantic Search</h1>
+  <div class="field">
     <p>
       This app will let you query a small database of arXiv articles on fission.
       The database consists of 71708 individual sentences automatically
-      extracted from 108 articles.
     </p>
     <p>
-      The search engine will attempt to return sentences from the database that
+      extracted from 108 articles. The search engine will attempt to return sentences from the database that
       are semantically related to your query.
     </p>
 
-    <input v-model="SearchBar" placeholder="Ex: fission fragment detectors" />
+    <input v-model="SearchBar" style="margin-top: 50px;" placeholder="Ex: fission fragment detectors" />
 
     <button @click="Search">Submit</button>
   </div>
