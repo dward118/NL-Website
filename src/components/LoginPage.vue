@@ -44,7 +44,7 @@ export default {
       if (this.LoginStatus){
       console.warn(this.username, this.password);
       console.warn(this.LoginStatus);
-      window.location.href = "http://localhost:8081/"
+      window.location.href = "http://localhost:8080/"
       } else{
 
         alert('Invalid username/password')

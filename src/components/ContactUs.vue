@@ -11,6 +11,8 @@
       <button type="submit">Send</button>
     </form>
   </div>
+  <div style="height: 200px;"></div>
+
 </template>
 
 <script>
