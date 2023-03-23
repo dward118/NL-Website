@@ -41,7 +41,7 @@ export default {
       email: "",
       password: "",
       institution: "",
-      experience: ""
+      experience: "3"
     }
   },
   methods: {
