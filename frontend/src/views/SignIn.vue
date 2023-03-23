@@ -1,28 +1,83 @@
 <template>
   <div>
-    <MenuBarLimited />
+    <MenuBar />
 
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Login</h1>
     <div class="field">
       <input type="text" placeholder="Enter Username" id="username" name="username" required />
       <input type="password" placeholder="Enter Password" id="password" name="password" required />
-      <button type="submit">Log in</button>
+      <button type="submit">Login</button>
       <p>
         <router-link to="/sign-up">Don't have an account? Sign up here.</router-link>
       </p>
     </div>
+
+
+
   </div>
+
+  <!-- This is to create whitespace at the bottom until we have other containers. -->
+  <div style="height: 200px;"></div>
 </template>
 
 <script>
-// import axios from 'axios'
-import MenuBarLimited from '../components/MenuBarLimited.vue';
+import MenuBar from './MenuBar.vue';
+
 
 export default {
   name: 'SignIn',
 
+  get(){
+    return{
+      username:'',
+      password:'',
+      LoginStatus:false
+ 
+    }
+  },
+  methods:{
+    login(){
+      //let result = await axios.post("http://localhost:3000/users",{
+       // email:this.email,
+      //  username:this.username,
+     //   password:this.password
+     // });
+
+     //None of this is right
+     this.LoginStatus = true;
+
+      if (this.LoginStatus){
+      console.warn(this.username, this.password);
+      console.warn(this.LoginStatus);
+      window.location.href = "http://localhost:8080/"
+      } else{
+
+        alert('Invalid username/password')
+  .then(() => {
+    console.log("Alert dialog closed.");
+  });
+
+      }
+
+      //if (result.status == 201){
+       // alert("sign-up done")
+       // localStorage.setItem("user-info",JSON.stringify(result.data))
+     // }
+
+    }
+  },
+
+
+
+  
   components: {
-    MenuBarLimited
+    MenuBar
+  },
+
+  data() {
+    return {
+      activeItem: 'NucScholar',
+    };
   },
 };
 </script>
@@ -47,9 +102,5 @@ export default {
   color: #fff;
   cursor: pointer;
   margin-bottom: 10px;
-}
-
-p {
-  text-align: center;
 }
 </style>
