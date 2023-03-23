@@ -11,6 +11,9 @@
         <router-link to="/sign-up">Don't have an account? Sign up here.</router-link>
       </p>
     </div>
+
+
+
   </div>
 
   <!-- This is to create whitespace at the bottom until we have other containers. -->
@@ -20,11 +23,59 @@
 <script>
 import MenuBar from './MenuBar.vue';
 
+
 export default {
   name: 'LoginPage',
 
+  get(){
+    return{
+      username:'',
+      password:'',
+      LoginStatus:false
+ 
+    }
+  },
+  methods:{
+    login(){
+      //let result = await axios.post("http://localhost:3000/users",{
+       // email:this.email,
+      //  username:this.username,
+     //   password:this.password
+     // });
+     this.LoginStatus = true;
+
+      if (this.LoginStatus){
+      console.warn(this.username, this.password);
+      console.warn(this.LoginStatus);
+      window.location.href = "http://localhost:8080/"
+      } else{
+
+        alert('Invalid username/password')
+  .then(() => {
+    console.log("Alert dialog closed.");
+  });
+
+      }
+
+      //if (result.status == 201){
+       // alert("sign-up done")
+       // localStorage.setItem("user-info",JSON.stringify(result.data))
+     // }
+
+    }
+  },
+
+
+
+  
   components: {
     MenuBar
+  },
+
+  data() {
+    return {
+      activeItem: 'NucScholar',
+    };
   },
 };
 </script>
@@ -48,10 +99,5 @@ export default {
   background: #00313c;
   color: #fff;
   cursor: pointer;
-  margin-bottom: 10px;
-}
-
-p {
-  text-align: center;
 }
 </style>
