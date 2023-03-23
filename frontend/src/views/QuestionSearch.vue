@@ -4,9 +4,7 @@
   <div class="field">
     <p>
       This app will let you query a small database of arXiv articles on fission.
-      The database consists of 71708 individual sentences automatically
-    </p>
-    <p>
+      The database consists of 71708 individual sentences automatically <br>
       extracted from 108 articles. The search engine will attempt to return short phrases from the database
       that most closely answer your question.
     </p>
@@ -15,8 +13,10 @@
       v-model="SearchBar" style="margin-top: 50px;" placeholder="Ex: What model is used to calculate tunneling?"
     />
 
-    <button @click="Search">Submit</button>
+    <button @click="Search">Search</button>
   </div>
+
+  <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
 </template>
 
@@ -66,5 +66,6 @@ export default {
 
 p {
   text-align: center;
+  line-height: 1.3;
 }
 </style>

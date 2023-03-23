@@ -6,7 +6,7 @@
     <div class="field">
       <input type="text" placeholder="Enter Username" id="username" name="username" required />
       <input type="password" placeholder="Enter Password" id="password" name="password" required />
-      <button type="submit">Login</button>
+      <button type="submit">Submit</button>
       <p>
         <router-link to="/sign-up">Don't have an account? Sign up here.</router-link>
       </p>
