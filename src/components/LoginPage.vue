@@ -1,24 +1,27 @@
 <template>
   <div>
-    <MenuBarLimited />
+    <MenuBar />
 
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Login</h1>
     <div class="field">
-      <input type="text" v-model="username"  placeholder="Enter Username" id="username" name="username" required />
-      <input type="password"  v-model="password"   placeholder="Enter Password" id="password" name="password" required />
-      <button type="submit" v-on:click="login">Log in</button>
-      <br />
-      <br />
-      <router-link to="/sign-up">SignUp</router-link>
+      <input type="text" placeholder="Enter Username" id="username" name="username" required />
+      <input type="password" placeholder="Enter Password" id="password" name="password" required />
+      <button type="submit">Login</button>
+      <p>
+        <router-link to="/sign-up">Don't have an account? Sign up here.</router-link>
+      </p>
     </div>
 
 
 
   </div>
+
+  <!-- This is to create whitespace at the bottom until we have other containers. -->
+  <div style="height: 200px;"></div>
 </template>
 
 <script>
-import MenuBarLimited from './MenuBarLimited.vue';
+import MenuBar from './MenuBar.vue';
 
 
 export default {
@@ -66,7 +69,7 @@ export default {
 
   
   components: {
-    MenuBarLimited
+    MenuBar
   },
 
   data() {

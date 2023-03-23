@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MenuBarLimited />
+    <MenuBar />
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Contact Us</h1>
     <form ref="form" @submit.prevent="sendEmail" class="field">
       <input type="text" placeholder="Enter Your First Name" name="firstName" required autocomplete="given-name">
@@ -18,13 +18,13 @@
 <script>
 
 import emailjs from '@emailjs/browser';
-import MenuBarLimited from './MenuBarLimited.vue';
+import MenuBar from './MenuBar.vue';
 
 export default {
   name: 'ContactUs',
 
   components: {
-    MenuBarLimited
+    MenuBar
   },
 
   methods: {

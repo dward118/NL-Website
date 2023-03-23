@@ -5,7 +5,7 @@
     <a><router-link to="/question">Ask a Question</router-link></a>
     <a><router-link to="/semantic">Search by Meaning</router-link></a>
     <a><router-link to="/contact-us">Contact Us</router-link></a>
-    <a><router-link to="/login">Login</router-link></a>
+    <a><router-link to="/login">My Account</router-link></a>
   </div>
   <footer>
     <p class="footerStyle">
@@ -53,13 +53,13 @@ footer {
   left: 0;
   background: #00313c;
   height: fit-content;
-  width: 99vw;
+  width: 100vw;
   border: 2px solid#fac62e;
 }
 
 .footerStyle {
   color: aliceblue;
   text-align: center;
-  font-size: large;
+  font-size: small;
 }
 </style>

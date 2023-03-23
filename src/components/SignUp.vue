@@ -1,29 +1,27 @@
 <template>
   <div>
-    <MenuBarLimited />
+    <MenuBar />
 
    
     <h1 style="font-size:40px; color: #00313c; margin-top: 150px;">Sign Up</h1>
     <div class="field">
-      <input type="email" v-model="email" placeholder="Enter Your Email" id="email" name="email" required />
-      <input type="text" v-model="username" placeholder="Enter Username" id="username" name="username" required />
-      <input type="password"  v-model="password"  placeholder="Enter Password" id="password" name="password" required />
-      <input type="text"  v-model="school"  placeholder="Enter School" id="school" name="school" required />
-      <input type="experience"  v-model="experience"  placeholder="Enter Experience" id="experience" name="experience" required />
-
-      <button type="submit" v-on:click="signUp" >Submit</button>
-      <br />
-      <br />
-      <router-link to="/login">Login</router-link>
-
+      <input type="email" placeholder="Enter Your Email" id="email" name="email" required>
+      <input type="text" placeholder="Enter Username" id="username" name="username" required />
+      <input type="password" placeholder="Enter Password" id="password" name="password" required />
+      <button type="submit">Submit</button>
+      <p>
+        <router-link to="/login">Back to Login</router-link>
+      </p>
     </div>
 
   </div>
+
+  <!-- This is to create whitespace at the bottom until we have other containers. -->
+  <div style="height: 200px;"></div>
 </template>
 
 <script>
-import MenuBarLimited from './MenuBarLimited.vue';
-//import axios from 'axios'
+import MenuBar from './MenuBar.vue';
 
 export default {
   name: 'SignUp',
@@ -55,7 +53,7 @@ export default {
 
 
   components: {
-    MenuBarLimited
+    MenuBar
   },
 };
 </script>
@@ -80,5 +78,9 @@ border: 1px solid skyblue;
 background: skyblue;
 color: #fff;
 cursor: pointer;
+}
+
+p {
+  text-align: center;
 }
 </style>
