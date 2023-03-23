@@ -11,12 +11,12 @@
       <button type="submit">Send</button>
     </form>
   </div>
-
-  <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
+
 </template>
 
 <script>
+
 import emailjs from '@emailjs/browser';
 import MenuBar from './MenuBar.vue';
 
