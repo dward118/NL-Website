@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MenuBarLimited />
+    <MenuBar />
 
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Sign Up</h1>
     <div class="field">
@@ -8,22 +8,28 @@
         <input type="email" placeholder="Enter Your Email" name="email" v-model="email" required>
         <input type="text" placeholder="Enter Username" name="username" v-model="username" required />
         <input type="password" placeholder="Enter Password" name="password" v-model="password" required />
+        <input type="text" placeholder="Enter Username" name="username" v-model="username" required />
+        <input type="text" placeholder="Enter Username" name="username" v-model="username" required />
         <button type="submit">Submit</button>
       </form>
+      <p>
+        <router-link to="/login">Back to Login</router-link>
+      </p>
     </div>
   </div>
+  <div style="height: 200px;"></div>
 </template>
 
 <script>
 import axios from 'axios'
 // import { response } from 'express';
-import MenuBarLimited from '../components/MenuBarLimited.vue';
+import MenuBar from '../components/MenuBar.vue';
 
 export default {
   name: 'SignUp',
 
   components: {
-    MenuBarLimited
+    MenuBar
   },
   data() {
     return {
@@ -79,5 +85,9 @@ export default {
   background: #00313c;
   color: #fff;
   cursor: pointer;
+}
+
+p {
+  text-align: center;
 }
 </style>

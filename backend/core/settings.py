@@ -27,7 +27,7 @@ SECRET_KEY = environ['DJANGO_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = []
-CORS_ALLOWED_ORIGINS = ['http://localhost:8080', 'http://127.0.0.1:8080']
+CORS_ALLOWED_ORIGINS = ['http://localhost:8081', 'http://127.0.0.1:8080']
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',

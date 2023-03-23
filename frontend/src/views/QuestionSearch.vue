@@ -1,5 +1,6 @@
 <template>
   <MenuBar />
+  <h1 style="font-size:40px; color: #00313c; margin-top: 150px;">Question Search</h1>
   <div class="field" style="margin-top: 130px">
     <p>
       This app will let you query a small database of arXiv articles on fission.
@@ -18,6 +19,7 @@
 
     <button @click="Search">Submit</button>
   </div>
+  <div style="height: 200px;"></div>
 </template>
 
 <script>
@@ -62,5 +64,9 @@ export default {
   background: #00313c;
   color: #fff;
   cursor: pointer;
+}
+
+p {
+  text-align: center;
 }
 </style>
