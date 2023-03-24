@@ -93,13 +93,17 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': environ['DATABASE_NAME'],
+    #     'USER': environ['DATABASE_USER'],
+    #     'PASSWORD': environ['DATABASE_PASSWORD'],
+    #     'HOST': environ['DATABASE_HOST'],
+    #     'PORT': environ['DATABASE_PORT'],
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': environ['DATABASE_NAME'],
-        'USER': environ['DATABASE_USER'],
-        'PASSWORD': environ['DATABASE_PASSWORD'],
-        'HOST': environ['DATABASE_HOST'],
-        'PORT': environ['DATABASE_PORT'],
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
 
