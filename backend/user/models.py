@@ -6,6 +6,8 @@ class User(AbstractUser):
     experience = models.IntegerField(editable=True, null=False)
     approved = models.BooleanField(default=False)
 
+    REQUIRED_FIELDS = ["first_name", "last_name", "email", "institution", "experience"]
+
     def __str__(self):
         return self.username
     
