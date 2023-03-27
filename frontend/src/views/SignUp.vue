@@ -12,6 +12,13 @@
         <input type="password" placeholder="Password"         v-model="password"    autocomplete="new-password" required/>
         <input type="text"     placeholder="Institution"      v-model="institution" autocomplete="organization" required/>
         <input type="range"    placeholder="Experience Level" v-model="experience" required min="0" max="5"/>
+        <!-- <select name="experience" v-model="experience" required>
+          <option value="" disabled selected hidden>Select Your Experience</option>
+          <option value="grad">Grad</option>
+          <option value="undergrad">Undergrad</option>
+          <option value="professor">Professor</option>
+          <option value="adjunct">Adjunct</option>
+        </select> -->
         <button type="submit">Submit</button>
       </form>
       <p>
@@ -19,6 +26,8 @@
       </p>
     </div>
   </div>
+
+  <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
 </template>
 
@@ -77,6 +86,17 @@ export default {
 <style scoped>
 .field input {
   width: 300px;
+  height: 40px;
+  padding-left: 20px;
+  display: block;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #fac62e;
+}
+
+.field select {
+  width: 325px;
   height: 40px;
   padding-left: 20px;
   display: block;

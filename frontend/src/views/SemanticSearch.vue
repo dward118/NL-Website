@@ -4,17 +4,17 @@
   <div class="field">
     <p>
       This app will let you query a small database of arXiv articles on fission.
-      The database consists of 71708 individual sentences automatically
-    </p>
-    <p>
+      The database consists of 71708 individual sentences automatically <br>
       extracted from 108 articles. The search engine will attempt to return sentences from the database that
       are semantically related to your query.
     </p>
 
-    <input v-model="SearchBar" style="margin-top: 50px;" placeholder="Ex: fission fragment detectors" />
+    <input v-model="SearchBar" style="margin-top: 50px;" placeholder="Ex: Fission fragment detectors" />
 
-    <button @click="Search">Submit</button>
+    <button @click="Search">Search</button>
   </div>
+
+  <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
 </template>
 
@@ -63,5 +63,6 @@ export default {
 
 p {
   text-align: center;
+  line-height: 1.3;
 }
 </style>

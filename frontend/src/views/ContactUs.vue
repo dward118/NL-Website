@@ -11,6 +11,8 @@
       <button type="submit">Send</button>
     </form>
   </div>
+
+  <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
 
 </template>
@@ -70,5 +72,6 @@ export default {
   margin-right: auto;
   margin-left: auto;
   border: 1px solid #fac62e;
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>
