@@ -5,7 +5,12 @@
     <a><router-link to="/question">Ask a Question</router-link></a>
     <a><router-link to="/semantic">Search by Meaning</router-link></a>
     <a><router-link to="/contact-us">Contact Us</router-link></a>
-    <a><router-link to="/login">My Account</router-link></a>
+    <a v-if="this.$store.state.isAuthenticated">
+      <router-link to="/login">My Account</router-link>
+    </a>
+    <a v-else>
+      <router-link to="/login">Login</router-link>
+    </a>
   </div>
   <footer>
     <p class="footerStyle">
@@ -20,7 +25,7 @@ export default {
   name: 'MenuBar',
 }
 </script>
-    
+
 <style scoped>
 /* Styles for the horizontal menu */
 .menu-item {

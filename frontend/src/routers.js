@@ -5,6 +5,7 @@ import ContactUs from './views/ContactUs.vue';
 import SignUp from './views/SignUp.vue';
 import QuestionSearch from './views/QuestionSearch.vue';
 import SemanticSearch from './views/SemanticSearch.vue';
+import AccountPage from './views/AccountPage.vue'
 
 const routes = [
     {
@@ -36,6 +37,11 @@ const routes = [
         name: "SemanticSearch",
         component: SemanticSearch,
         path: "/semantic",
+    },
+    {
+        name: "AccountPage",
+        component: AccountPage,
+        path: "/account"
     },
 ];
 
