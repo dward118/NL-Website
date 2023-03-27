@@ -4,9 +4,11 @@
 
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Login</h1>
     <div class="field">
-      <input type="text" placeholder="Enter Username" id="username" name="username" required />
-      <input type="password" placeholder="Enter Password" id="password" name="password" required />
-      <button type="submit">Login</button>
+      <form @submit.prevent="submitForm">
+        <input type="text" placeholder="Enter Username"     v-model="username" autocomplete="username" required/>
+        <input type="password" placeholder="Enter Password" v-model="password" autocomplete="current-password" required/>
+        <button type="submit">Login</button>
+      </form>
       <p>
         <router-link to="/sign-up">Don't have an account? Sign up here.</router-link>
       </p>
@@ -18,6 +20,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import MenuBar from '../components/MenuBar.vue';
 
 export default {
@@ -26,6 +29,37 @@ export default {
   components: {
     MenuBar
   },
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    submitForm(e) {
+      const formData = {
+        username: this.username,
+        password: this.password
+      }
+
+      axios
+        .post('/api/v1/token/login', formData)
+        .then(response => {
+          console.log(response)
+
+          const token = response.data.auth_token
+          this.$store.commit('setToken', token)
+          axios.defaults.headers.common['Authorization'] = "Token " + token
+          localStorage.setItem('token', token)
+          
+        })
+        .catch(error => {
+          console.error(e)
+          console.error(error)
+
+        })
+    }
+  }
 };
 </script>
 
