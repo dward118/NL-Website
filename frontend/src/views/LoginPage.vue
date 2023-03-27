@@ -4,7 +4,7 @@
 
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Login</h1>
     <div class="field">
-      <form @submit.prevent="submitForm">
+      <form @submit.prevent="submitForm" autocomplete="on">
         <input type="text" placeholder="Enter Username"     v-model="username" autocomplete="username" required/>
         <input type="password" placeholder="Enter Password" v-model="password" autocomplete="current-password" required/>
         <button type="submit">Login</button>
