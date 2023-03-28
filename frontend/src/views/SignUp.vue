@@ -11,14 +11,15 @@
         <input type="email"    placeholder="Email"            v-model="email"       autocomplete="email" required/>
         <input type="password" placeholder="Password"         v-model="password"    autocomplete="new-password" required/>
         <input type="text"     placeholder="Institution"      v-model="institution" autocomplete="organization" required/>
-        <input type="range"    placeholder="Experience Level" v-model="experience" required min="0" max="5"/>
-        <!-- <select name="experience" v-model="experience" required>
+        <!-- <input type="range"    placeholder="Experience Level" v-model="experience" required min="0" max="5"/> -->
+        <select name="experience" v-model="experience" required>
           <option value="" disabled selected hidden>Select Your Experience</option>
-          <option value="grad">Grad</option>
-          <option value="undergrad">Undergrad</option>
-          <option value="professor">Professor</option>
-          <option value="adjunct">Adjunct</option>
-        </select> -->
+          <option value="1">Graduate</option>
+          <option value="2">Undergraduate</option>
+          <option value="3">Postdoctoral</option>
+          <option value="4">Junior Staff</option>
+          <option value="5">Staff</option>
+        </select>
         <button type="submit">Submit</button>
       </form>
       <p>
