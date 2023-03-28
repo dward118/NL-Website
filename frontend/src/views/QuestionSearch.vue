@@ -16,6 +16,11 @@
     <button @click="Search">Search</button>
   </div>
 
+  <h1 style="color: #00313c; margin-top: 100px; margin-bottom: 30px; font-size: 35px;">Results</h1>
+  <div class="qsearch-container">
+    Search for results! <br>
+  </div>
+
   <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
 </template>
@@ -67,5 +72,15 @@ export default {
 p {
   text-align: center;
   line-height: 1.3;
+}
+
+.qsearch-container {
+  margin-top: 150px;
+  margin: 25px;
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  border: 1px solid #00313c;
+  padding: 10px;
 }
 </style>

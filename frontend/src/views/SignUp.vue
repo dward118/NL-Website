@@ -14,8 +14,8 @@
         <!-- <input type="range"    placeholder="Experience Level" v-model="experience" required min="0" max="5"/> -->
         <select name="experience" v-model="experience" required>
           <option value="" disabled selected hidden>Select Your Experience</option>
-          <option value="1">Graduate</option>
-          <option value="2">Undergraduate</option>
+          <option value="1">Undergraduate</option>
+          <option value="2">Graduate</option>
           <option value="3">Postdoctoral</option>
           <option value="4">Junior Staff</option>
           <option value="5">Staff</option>
