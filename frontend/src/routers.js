@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomePage from './components/Homepage.vue';
-import LoginPage from './components/LoginPage.vue';
-import ContactUs from './components/ContactUs.vue';
-import SignUp from './components/SignUp.vue';
-import QuestionSearch from './components/QuestionSearch.vue';
-import SemanticSearch from './components/SemanticSearch.vue';
+import HomePage from './views/Homepage.vue';
+import LoginPage from './views/LoginPage.vue';
+import ContactUs from './views/ContactUs.vue';
+import SignUp from './views/SignUp.vue';
+import QuestionSearch from './views/QuestionSearch.vue';
+import SemanticSearch from './views/SemanticSearch.vue';
+import AccountPage from './views/AccountPage.vue'
 
 const routes = [
     {
@@ -36,6 +37,11 @@ const routes = [
         name: "SemanticSearch",
         component: SemanticSearch,
         path: "/semantic",
+    },
+    {
+        name: "AccountPage",
+        component: AccountPage,
+        path: "/account"
     },
 ];
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <MenuBarLimited />
+    <MenuBar />
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Contact Us</h1>
     <form ref="form" @submit.prevent="sendEmail" class="field">
       <input type="text" placeholder="Enter Your First Name" name="firstName" required autocomplete="given-name">
@@ -11,17 +11,22 @@
       <button type="submit">Send</button>
     </form>
   </div>
+
+  <!-- This is to create whitespace at the bottom until we have other containers. -->
+  <div style="height: 200px;"></div>
+
 </template>
 
 <script>
+
 import emailjs from '@emailjs/browser';
-import MenuBarLimited from './MenuBarLimited.vue';
+import MenuBar from '../components/MenuBar.vue';
 
 export default {
   name: 'ContactUs',
 
   components: {
-    MenuBarLimited
+    MenuBar
   },
 
   methods: {
@@ -67,5 +72,6 @@ export default {
   margin-right: auto;
   margin-left: auto;
   border: 1px solid #fac62e;
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>

@@ -2,10 +2,18 @@
   <div class="menu-item">
     <a><router-link to="/" style="font-size: 30px; color: #fac62e; font-weight: bold;"
         onmouseover="this.style.color='aliceblue'" onmouseout="this.style.color='#fac62e'">NucScholar</router-link></a>
+    <div class="menu-item-right">
     <a><router-link to="/question">Ask a Question</router-link></a>
     <a><router-link to="/semantic">Search by Meaning</router-link></a>
     <a><router-link to="/contact-us">Contact Us</router-link></a>
-    <a><router-link to="/login">Login</router-link></a>
+
+    <a v-if="this.$store.state.isAuthenticated">
+      <router-link to="/account">My Account</router-link>
+    </a>
+    <a v-else>
+      <router-link to="/login">Login</router-link>
+    </a>
+  </div>
   </div>
   <footer>
     <p class="footerStyle">
@@ -20,7 +28,7 @@ export default {
   name: 'MenuBar',
 }
 </script>
-    
+
 <style scoped>
 /* Styles for the horizontal menu */
 .menu-item {
@@ -47,19 +55,23 @@ export default {
   color: #fac62e;
 }
 
+.menu-item-right {
+  float: right;
+}
+
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   background: #00313c;
   height: fit-content;
-  width: 99vw;
+  width: 100vw;
   border: 2px solid#fac62e;
 }
 
 .footerStyle {
   color: aliceblue;
   text-align: center;
-  font-size: large;
+  font-size: small;
 }
 </style>

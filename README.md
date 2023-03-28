@@ -1,24 +1,31 @@
-# 4120-project
+# NucScholar
 
-## Project setup
+## How to Run
+### .env
 ```
-npm install
+DATABASE_DATABASE=
+DATABASE_USER=
+DATABASE_HOST=
+DATABASE_PORT=
+DATABASE_PASSWORD=
+
+#postgres container
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+
+#pgadmin container
+PGADMIN_DEFAULT_EMAIL=
+PGADMIN_DEFAULT_PASSWORD=
+PGADMIN_PORT=8088
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Frontend
+1. `cd frontend`
+2. `npm install`
+3. `npm run dev`
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Backend
+1. `python3 -m venv .venv`
+2. `docker compose up -d`
+3. `pip3 install -r backend/requirements.txt`
+4. `python3 backend/manage.py runserver`

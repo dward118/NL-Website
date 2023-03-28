@@ -49,13 +49,13 @@ footer {
   left: 0;
   background: #00313c;
   height: fit-content;
-  width: 99vw;
+  width: 100vw;
   border: 2px solid#fac62e;
 }
 
 .footerStyle {
   color: aliceblue;
   text-align: center;
-  font-size: large;
+  font-size: small;
 }
 </style>
