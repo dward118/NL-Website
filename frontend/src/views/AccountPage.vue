@@ -49,13 +49,13 @@ export default {
       axios
         .post('/api/v1/token/logout')
         .then(response => {
-
-          this.$router.push('/login')
           console.log(response)
 
           this.$store.commit('removeToken')
           axios.defaults.headers.common['Authorization'] = ""
           localStorage.setItem('token', "")
+
+          this.$router.push('/')
 
         })
         .catch(error => {

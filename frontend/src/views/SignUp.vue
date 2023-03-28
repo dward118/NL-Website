@@ -51,7 +51,7 @@ export default {
       email: "",
       password: "",
       institution: "",
-      experience: "3"
+      experience: ""
     }
   },
   methods: {
@@ -66,7 +66,7 @@ export default {
         experience: this.experience
       }
 
-      console.log(formData)
+      //console.log(formData)
 
       axios
         .post('/api/v1/users/', formData)
