@@ -15,7 +15,10 @@
   </p>
 
   <div class="logout" id="logout">
-    <button type="submit">Logout</button>
+    <form @submit.prevent="logout">
+      <button type="submit">Logout</button>
+    </form>
+    
   </div>
 
   <div class="container" style="background-color: #aaa;" id="container">
@@ -31,6 +34,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import MenuBar from '../components/MenuBar.vue';
 
 export default {
@@ -39,7 +43,29 @@ export default {
   components: {
     MenuBar
   },
+  methods: {
+    logout(e) {
+      console.log("logout")
+      axios
+        .post('/api/v1/token/logout')
+        .then(response => {
+
+          this.$router.push('/login')
+          console.log(response)
+
+          this.$store.commit('removeToken')
+          axios.defaults.headers.common['Authorization'] = ""
+          localStorage.setItem('token', "")
+
+        })
+        .catch(error => {
+          console.error(error)
+          console.error(e)
+        })
+    }
+  }
 }
+
 </script>
 
 <style>
