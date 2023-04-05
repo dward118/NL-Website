@@ -15,11 +15,12 @@ from djoser.views import TokenCreateView
 from .models import User
 from .serializer import UserSerializer
 
-class TokenCreateView(TokenCreateView):
+class MoreInfomationTokenCreateView(TokenCreateView):
 
     def __init__(self, **kwargs) -> None:
         super().__init__(**kwargs)
-        super().serializer_class = UserSerializer
+        print(type(super()))
+        #super().serializer_class = UserSerializer
 
     def _action(self, attrs):
         print("validate 20")

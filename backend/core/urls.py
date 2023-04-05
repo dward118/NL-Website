@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from user.views import TokenCreateView
+from user.views import MoreInfomationTokenCreateView
 
 urlpatterns = [
-    path('api/v1/token/login', TokenCreateView.as_view(), name='custom_token_obtain_pair'),
+    path('api/v1/token/login', MoreInfomationTokenCreateView.as_view(), name='custom_token_obtain_pair'),
 
     path('admin/', admin.site.urls),
     path('api/v1/', include('djoser.urls')),
