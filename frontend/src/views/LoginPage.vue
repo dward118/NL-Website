@@ -21,6 +21,8 @@
 
 <script>
 import axios from 'axios';
+import VueJwtDecode from 'vue-jwt-decode';
+
 import MenuBar from '../components/MenuBar.vue';
 
 export default {
@@ -49,6 +51,9 @@ export default {
         .then(response => {
           console.log(response)
 
+          console.log(response.data)
+
+          decode(response.data['access'])
           // const token = response.data.auth_token
           // this.$store.commit('setToken', token)
           // axios.defaults.headers.common['Authorization'] = "Token " + token
@@ -64,7 +69,19 @@ export default {
         })
     }
   }
+  
 };
+const decode = (token) => {
+    //Take token from window local storage
+    //let token = localStorage.getItem('user');
+    try{
+        let decoded = VueJwtDecode.decode(token)
+        console.log(decoded)
+    }
+    catch(err){
+        console.log('token is null: ',err);
+    }
+}
 </script>
 
 <style scoped>

@@ -3,7 +3,15 @@ import { createStore } from 'vuex'
 export default createStore({
     state: {
         token: '',
-        isAuthenticated: false
+        isAuthenticated: false,
+
+        username: '',
+        first_name: '',
+        last_name: '',
+        email: '',
+        institution: '',
+        experience: '',
+        approved: false
     },
 
     mutations: {

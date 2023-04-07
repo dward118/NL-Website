@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import TokenRefreshView
-#from rest_framework_simplejwt.views import TokenBlacklistView #unknown import???? docs literally use this exact line
+from rest_framework_simplejwt.views import TokenBlacklistView
 
 from user.views import CustomTokenObtainPairView, SignUpView
 
@@ -27,5 +27,5 @@ urlpatterns = [
     path('api/signup', SignUpView.as_view(), name='sign-up'),
     path('api/token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    #path('api/token/logout/', TokenBlacklistView.as_view(), name='token_blacklist'),
+    path('api/token/logout/', TokenBlacklistView.as_view(), name='token_blacklist'),
 ]
