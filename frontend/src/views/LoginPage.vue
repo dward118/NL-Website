@@ -52,8 +52,11 @@ export default {
           console.log(response)
 
           console.log(response.data)
+          
+          const access = decode(response.data['access'])
+          const refresh = decode(response.data['refresh'])
 
-          decode(response.data['access'])
+          // console.log(access['institution']) //THIS WORKS <----
           // const token = response.data.auth_token
           // this.$store.commit('setToken', token)
           // axios.defaults.headers.common['Authorization'] = "Token " + token
@@ -72,14 +75,13 @@ export default {
   
 };
 const decode = (token) => {
-    //Take token from window local storage
-    //let token = localStorage.getItem('user');
     try{
-        let decoded = VueJwtDecode.decode(token)
-        console.log(decoded)
+      return VueJwtDecode.decode(token)
+
     }
-    catch(err){
-        console.log('token is null: ',err);
+    catch(error){
+      console.log('Token Error: ', error);
+      return null
     }
 }
 </script>
