@@ -1,35 +1,21 @@
-from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
+from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from .forms import UserCreationForm
 from .models import User
-from .serializer import UserSerializer
+from .serializer import UserSerializer, CustomTokenObtainPairSerializer
 
-class SignUpView(CreateView):
-    form_class = UserCreationForm
-    success_url = reverse_lazy('login')
-    template_name = 'commons/signup.html'
+#@api_view(['POST']) #TODO COMBINE ALL INTO CLASSES
+class SignUpView(GenericAPIView):
+    serializer_class = UserSerializer
 
-class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
-    @classmethod
-    def get_token(cls, user):
-        token = super().get_token(user)
+@api_view(['POST'])
+def post_data(request):
+    user = User.objects.all()
+    serializer = UserSerializer(user)
+    return Response(serializer.data)
 
-        # Add custom claims
-        token['username'] = user.username
-        token['first_name'] = user.first_name      
-        token['last_name'] = user.last_name
-        token['email'] = user.email
-        token['institution'] = user.institution
-        token['experience'] = user.experience
-        token['approved'] = user.approved
-
-        return token
-    
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
 

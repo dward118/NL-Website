@@ -42,15 +42,17 @@ export default {
         password: this.password
       }
 
+      console.log(formData)
+
       axios
-        .post('/api/v1/token/login', formData)
+        .post('/api/token/', formData)
         .then(response => {
           console.log(response)
 
-          const token = response.data.auth_token
-          this.$store.commit('setToken', token)
-          axios.defaults.headers.common['Authorization'] = "Token " + token
-          localStorage.setItem('token', token)
+          // const token = response.data.auth_token
+          // this.$store.commit('setToken', token)
+          // axios.defaults.headers.common['Authorization'] = "Token " + token
+          // localStorage.setItem('token', token)
 
           this.$router.push('/')
           
