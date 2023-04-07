@@ -9,10 +9,10 @@ from .forms import UserCreationForm
 from .models import User
 from .serializer import UserSerializer
 
-# class SignUpView(CreateView):
-#     form_class = UserCreationForm
-#     success_url = reverse_lazy("login")
-#     template_name = "registration/signup.html"
+class SignUpView(CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'commons/signup.html'
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
@@ -21,12 +21,17 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
         # Add custom claims
         token['username'] = user.username
+        token['first_name'] = user.first_name      
+        token['last_name'] = user.last_name
+        token['email'] = user.email
+        token['institution'] = user.institution
+        token['experience'] = user.experience
+        token['approved'] = user.approved
 
         return token
     
 class CustomTokenObtainPairView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
-
 
 @api_view(['GET'])
 def get_data(request):
