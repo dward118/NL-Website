@@ -17,8 +17,7 @@
   </div>
   <footer>
     <p class="footerStyle">
-      NucScholar is a product of Lawrence Berkeley National Laboratory &trade;
-      and The Air Force Institute of Technology &trade;
+      NucScholar is an actively developing project: please <u><a><router-link to="/contact-us">contact us</router-link></a></u> us with any feedback.
     </p>
   </footer>
 </template>
@@ -73,5 +72,10 @@ footer {
   color: aliceblue;
   text-align: center;
   font-size: small;
+}
+
+.footerStyle a{
+  text-decoration: none;
+  color: aliceblue;
 }
 </style>

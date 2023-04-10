@@ -12,6 +12,9 @@
       <p>
         <router-link to="/sign-up">Don't have an account? Sign up here.</router-link>
       </p>
+      <p>
+        <router-link to="/sign-up">Forgot Password?</router-link>
+      </p>
     </div>
   </div>
 

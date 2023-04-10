@@ -7,7 +7,7 @@
     Thank you for using the NucScholar website. <br><br>
     From this page, you can manage different aspects of your account such as: <br>
     -<a href="#container">Changing your password.</a><br>
-    -Logging out.<br>
+    -<a href="#container">Logging out.</a><br>
     -Toggle settings.<br>
     -View admin controls.<br><br>
 
@@ -18,14 +18,14 @@
     <form @submit.prevent="logout">
       <button type="submit">Logout</button>
     </form>
-    
   </div>
 
   <div class="container" style="background-color: #aaa;" id="container">
     <h2 style="color: #00313c; font-size: 30px;">Change your password</h2>
-    <hr style="margin-bottom: 50px; border: 1px solid #00313c;">
-    <input type="password" placeholder="Enter Password" v-model="password" autocomplete="current-password" required/>
-    <input type="password" placeholder="Confirm Password" v-model="password" autocomplete="current-password" required/>
+    <hr style="margin-bottom: 20px; border: 1px solid #00313c;">
+    <input type="password" placeholder="Enter Your Old Password" v-model="password" autocomplete="current-password" required/>
+    <input type="password" placeholder="Enter Your New Password" v-model="password" autocomplete="current-password" required/>
+    <input type="password" placeholder="Confirm New Password" v-model="password" autocomplete="current-password" required/>
     <button type="submit">Change</button>
   </div>
 
@@ -79,7 +79,7 @@ export default {
 }
 
 .container {
-  margin: 300px auto 0px auto;
+  margin: 100px auto 0px auto;
   width: 400px;
   height: 20rem;
   border: 1px solid #00313c;
@@ -105,7 +105,7 @@ export default {
 }
 
 .logout button {
-margin: 100px auto 10px auto;
+margin: 500px auto 10px auto;
 width: 320px;
 height: 40px;
 border: 1px solid #00313c;
