@@ -31,14 +31,14 @@ export default createStore({
                 depopulateStore(state)
             }
         },
-        setToken(state, accessToken, refreshToken) {
-            state.access = accessToken
-            state.refresh = refreshToken //TODO refreshToken is always undefined
+        setToken(state, tokens) {
+            state.access = tokens.access
+            state.refresh = tokens.refresh
             console.log("set token")
             console.log(state.access)
             console.log(state.refresh)
 
-            populateStore(state, accessToken) 
+            populateStore(state, state.refresh) 
 
             console.log(state.username)
             console.log(state.institution)
