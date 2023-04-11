@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 
-import { decodeToken } from './token'
+import { populateStore, depopulateStore } from './token.js'
 
 export default createStore({
     state: {
@@ -20,28 +20,25 @@ export default createStore({
     mutations: {
         initializeStore(state) {
             if (localStorage.getItem('refresh')) {
-                state.token = localStorage.getItem('refresh')
-                state.isAuthenticated = true
+                state.refresh = localStorage.getItem('refresh')
+                console.log("init")
+                populateStore(state, state.refresh)
 
             } else {
-                state.token = ''
-                state.isAuthenticated = false
+                state.access = ''
+                state.refresh = ''
+
+                depopulateStore(state)
             }
         },
         setToken(state, accessToken, refreshToken) {
             state.access = accessToken
-            state.refresh = refreshToken
-            state.isAuthenticated = true
+            state.refresh = refreshToken //TODO refreshToken is always undefined
+            console.log("set token")
+            console.log(state.access)
+            console.log(state.refresh)
 
-            const decodedRefresh = decodeToken(refreshToken)
-
-            state.username = decodedRefresh['username']
-            state.first_name = decodedRefresh['first_name']
-            state.last_name = decodedRefresh['last_name']
-            state.email = decodedRefresh['email']
-            state.institution = decodedRefresh['institution']
-            state.experience = decodedRefresh['experience']
-            state.approved = decodedRefresh['approved']
+            populateStore(state, accessToken) 
 
             console.log(state.username)
             console.log(state.institution)
@@ -49,15 +46,8 @@ export default createStore({
         removeToken(state) {
             state.access = ''
             state.refresh = ''
-            state.isAuthenticated = false
 
-            state.username = ''
-            state.first_name = ''
-            state.last_name = ''
-            state.email = ''
-            state.institution = ''
-            state.experience = ''
-            state.approved = ''
+            depopulateStore(state)
         },
     },
 
