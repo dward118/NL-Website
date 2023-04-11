@@ -20,7 +20,6 @@ from rest_framework_simplejwt.views import TokenBlacklistView
 
 from user.views import CustomTokenObtainPairView, SignUpView
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
 

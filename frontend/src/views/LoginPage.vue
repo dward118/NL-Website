@@ -21,7 +21,7 @@
 
 <script>
 import axios from 'axios';
-import VueJwtDecode from 'vue-jwt-decode';
+//import VueJwtDecode from 'vue-jwt-decode';
 
 import MenuBar from '../components/MenuBar.vue';
 
@@ -52,9 +52,11 @@ export default {
           console.log(response)
 
           console.log(response.data)
-          
-          const access = decode(response.data['access'])
-          const refresh = decode(response.data['refresh'])
+
+          const access = response.data['access']
+          const refresh =response.data['refresh']
+
+          this.$store.commit('setToken', access, refresh)
 
           // console.log(access['institution']) //THIS WORKS <----
           // const token = response.data.auth_token
@@ -63,7 +65,7 @@ export default {
           // localStorage.setItem('token', token)
 
           this.$router.push('/')
-          
+
         })
         .catch(error => {
           console.error(e)
@@ -72,18 +74,18 @@ export default {
         })
     }
   }
-  
-};
-const decode = (token) => {
-    try{
-      return VueJwtDecode.decode(token)
 
-    }
-    catch(error){
-      console.log('Token Error: ', error);
-      return null
-    }
-}
+};
+// const decodeToken = (token) => {
+//     try{
+//       return VueJwtDecode.decode(token)
+
+//     }
+//     catch(error){
+//       console.log('Token Error: ', error);
+//       return null
+//     }
+// }
 </script>
 
 <style scoped>
