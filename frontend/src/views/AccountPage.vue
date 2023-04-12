@@ -1,7 +1,7 @@
 <template>
   <MenuBar />
 
-  <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Welcome 'USER'!</h1>
+  <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Welcome {{ this.$store.state.username }}</h1>
 
   <p class="greeting">
     Thank you for using the NucScholar website. <br><br>
