@@ -71,7 +71,7 @@ export default {
         approved: false
       }
 
-      //console.log(formData)
+      console.log(formData)
 
       axios
         .post('/api/register', formData)

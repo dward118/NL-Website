@@ -21,7 +21,6 @@ export default createStore({
         initializeStore(state) {
             if (localStorage.getItem('refresh')) {
                 state.refresh = localStorage.getItem('refresh')
-                console.log("init")
                 populateStore(state, state.refresh)
 
             } else {
@@ -34,14 +33,8 @@ export default createStore({
         setToken(state, tokens) {
             state.access = tokens.access
             state.refresh = tokens.refresh
-            console.log("set token")
-            console.log(state.access)
-            console.log(state.refresh)
 
             populateStore(state, state.refresh) 
-
-            console.log(state.username)
-            console.log(state.institution)
         },
         removeToken(state) {
             state.access = ''

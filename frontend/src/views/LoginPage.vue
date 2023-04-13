@@ -46,13 +46,9 @@ export default {
         password: this.password
       }
 
-      console.log(formData)
-
       axios
         .post('/api/token/', formData)
         .then(response => {
-          console.log(response)
-          console.log(response.data)
           const access = response.data['access']
           const refresh= response.data['refresh']
 

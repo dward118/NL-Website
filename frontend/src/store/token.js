@@ -1,7 +1,6 @@
 import jwt_decode from "jwt-decode";
 
 const decodeToken = (token) => {
-  console.log("decodeToken")
     try {
       return jwt_decode(token)
 
