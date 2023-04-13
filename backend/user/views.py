@@ -2,11 +2,9 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from .forms import UserCreationForm
-from .models import User
 from .serializer import UserSerializer, CustomTokenObtainPairSerializer
 
-class registerView(GenericAPIView):
+class RegisterView(GenericAPIView):
     serializer_class = UserSerializer
 
     def post(self, request):
