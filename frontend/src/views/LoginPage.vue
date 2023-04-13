@@ -24,6 +24,7 @@
 
 <script>
 import axios from 'axios';
+
 import MenuBar from '../components/MenuBar.vue';
 
 export default {
@@ -45,18 +46,19 @@ export default {
         password: this.password
       }
 
+      console.log(formData)
+
       axios
-        .post('/api/v1/token/login', formData)
+        .post('/api/token/', formData)
         .then(response => {
           console.log(response)
+          console.log(response.data)
+          const access = response.data['access']
+          const refresh= response.data['refresh']
 
-          const token = response.data.auth_token
-          this.$store.commit('setToken', token)
-          axios.defaults.headers.common['Authorization'] = "Token " + token
-          localStorage.setItem('token', token)
-
+          this.$store.commit('setToken', { access, refresh })
           this.$router.push('/')
-          
+
         })
         .catch(error => {
           console.error(e)
@@ -65,6 +67,7 @@ export default {
         })
     }
   }
+
 };
 </script>
 

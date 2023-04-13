@@ -3,14 +3,14 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 from .models import User
 
-class CustomUserCreationForm(UserCreationForm):
-
+#used by django admin, not frontend
+class UserCreationForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ("username", "first_name", "last_name", "email", "institution", "experience", "approved")
+        fields = ("username", "first_name", "last_name", "email", "institution", "experience")
 
-class CustomUserChangeForm(UserChangeForm):
-
+#used by django admin, not frontend
+class UserChangeForm(UserChangeForm):
     class Meta:
         model = User
         fields = ("username", "first_name", "last_name", "email", "institution", "experience", "approved")

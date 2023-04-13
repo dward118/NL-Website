@@ -1,9 +1,17 @@
-from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
+from rest_framework.generics import GenericAPIView
+from rest_framework.response import Response
+from rest_framework_simplejwt.views import TokenObtainPairView
 
-from .forms import CustomUserCreationForm
+from .serializer import UserSerializer, CustomTokenObtainPairSerializer
 
-class SignUpView(CreateView):
-    form_class = CustomUserCreationForm
-    success_url = reverse_lazy("login")
-    template_name = "registration/signup.html"
+class RegisterView(GenericAPIView):
+    serializer_class = UserSerializer
+
+    def post(self, request):
+        serializer = UserSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
+
+class CustomTokenObtainPairView(TokenObtainPairView):
+    serializer_class = CustomTokenObtainPairSerializer

@@ -1,29 +1,54 @@
 import { createStore } from 'vuex'
 
+import { populateStore, depopulateStore } from './token.js'
+
 export default createStore({
     state: {
-        token: '',
-        isAuthenticated: false
+        access: '',
+        refresh: '',
+        isAuthenticated: false,
+
+        username: '',
+        first_name: '',
+        last_name: '',
+        email: '',
+        institution: '',
+        experience: '',
+        approved: false
     },
 
     mutations: {
         initializeStore(state) {
-            if (localStorage.getItem('token')) {
-                state.token = localStorage.getItem('token')
-                state.isAuthenticated = true
+            if (localStorage.getItem('refresh')) {
+                state.refresh = localStorage.getItem('refresh')
+                console.log("init")
+                populateStore(state, state.refresh)
+
             } else {
-                state.token = ''
-                state.isAuthenticated = false
+                state.access = ''
+                state.refresh = ''
+
+                depopulateStore(state)
             }
         },
-        setToken(state, token) {
-            state.token = token
-            state.isAuthenticated = true
+        setToken(state, tokens) {
+            state.access = tokens.access
+            state.refresh = tokens.refresh
+            console.log("set token")
+            console.log(state.access)
+            console.log(state.refresh)
+
+            populateStore(state, state.refresh) 
+
+            console.log(state.username)
+            console.log(state.institution)
         },
         removeToken(state) {
-            state.token = ''
-            state.isAuthenticated = false
-        }
+            state.access = ''
+            state.refresh = ''
+
+            depopulateStore(state)
+        },
     },
 
     actions: {},

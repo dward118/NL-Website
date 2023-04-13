@@ -67,13 +67,14 @@ export default {
         email: this.email,
         password: this.password,
         institution: this.institution,
-        experience: this.experience
+        experience: this.experience,
+        approved: false
       }
 
       //console.log(formData)
 
       axios
-        .post('/api/v1/users/', formData)
+        .post('/api/register', formData)
         .then(response => {
 
           this.$router.push('/login')
