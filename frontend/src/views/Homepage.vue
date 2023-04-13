@@ -26,6 +26,13 @@
     No scheduled maintenance. <br>
   </div>
 
+  <!-- Logos. -->
+  <div class="leftLogo">
+    <img src="https://github.com/dward118/NL-Website/blob/dev/frontend/src/assets/berkeley.png?raw=true" alt="BerkelyLab" width="100" height="100"/>
+  </div>
+  <div class="rightLogo">
+    <img src="https://github.com/dward118/NL-Website/blob/dev/frontend/src/assets/afit.jpg?raw=true" alt="AFIT" width="200" height="100"/>
+  </div>
   <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
 </template>
@@ -57,5 +64,17 @@ p {
   margin: 0 auto;
   border: 1px solid #fac62e;
   padding: 10px;
+}
+
+.leftLogo {
+  display: inline-block;
+  margin-top: 100px;
+  margin-right: 5px;
+}
+
+.rightLogo {
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: 5px;
 }
 </style>
