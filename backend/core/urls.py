@@ -18,13 +18,16 @@ from django.urls import path, include
 from rest_framework_simplejwt.views import TokenRefreshView
 from rest_framework_simplejwt.views import TokenBlacklistView
 
-from user.views import CustomTokenObtainPairView, RegisterView
+from user.views import RegisterView, CustomTokenObtainPairView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    #user app
     path('api/register', RegisterView.as_view(), name='register'),
     path('api/token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/logout/', TokenBlacklistView.as_view(), name='token_blacklist'),
+
+    #other apps
 ]

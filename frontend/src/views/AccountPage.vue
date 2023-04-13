@@ -54,15 +54,17 @@ export default {
   },
   methods: {
     logout(e) {
-      console.log("logout")
+      const formData = {
+        refresh: this.$store.state.refresh
+      }
+
+      console.log(formData)
       axios
-        .post('/api/v1/token/logout')
+        .post('/api/token/logout/', formData)
         .then(response => {
           console.log(response)
 
           this.$store.commit('removeToken')
-          axios.defaults.headers.common['Authorization'] = ""
-          localStorage.setItem('token', "")
 
           this.$router.push('/')
 

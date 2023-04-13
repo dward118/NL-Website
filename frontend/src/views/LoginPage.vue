@@ -50,7 +50,7 @@ export default {
         .post('/api/token/', formData)
         .then(response => {
           const access = response.data['access']
-          const refresh= response.data['refresh']
+          const refresh = response.data['refresh']
 
           this.$store.commit('setToken', { access, refresh })
           this.$router.push('/')

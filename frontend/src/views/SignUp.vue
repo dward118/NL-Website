@@ -15,7 +15,6 @@
           <input type="email"    placeholder="Email"            v-model="email"       autocomplete="email" required/>
           <input type="text"     placeholder="Institution"      v-model="institution" autocomplete="organization" required/>
         </div>
-        <!-- <input type="range"    placeholder="Experience Level" v-model="experience" required min="0" max="5"/> -->
         <select name="experience" v-model="experience" required>
           <option value="" disabled selected hidden>Select Your Experience</option>
           <option value="1">Undergraduate</option>
