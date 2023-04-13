@@ -9,9 +9,12 @@
       are semantically related to your query.
     </p>
 
-    <input v-model="SearchBar" style="margin-top: 50px;" placeholder="Ex: Fission fragment detectors" />
-
-    <button @click="Search">Search</button>
+    <div class="leftBound">
+      <input v-model="SearchBar" style="margin-top: 50px;" placeholder="Ex: Fission fragment detectors" />
+    </div>
+    <div class="rightBound">
+      <button @click="Search">Search</button>
+    </div>
   </div>
 
   <h1 style="color: #00313c; margin-top: 100px; margin-bottom: 30px; font-size: 35px;">Results</h1>
@@ -98,6 +101,15 @@ p {
 .rightLogo {
   display: inline-block;
   margin-top: 100px;
+  margin-left: 5px;
+}
+
+.leftBound{
+  display: inline-block;
+  margin-right: 5px;
+}
+.rightBound{
+  display: inline-block;
   margin-left: 5px;
 }
 </style>
