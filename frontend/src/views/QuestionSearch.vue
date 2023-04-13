@@ -24,10 +24,10 @@
   <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
   <div class="leftLogo">
-    <img src="frontend\src\assets\berkeley.png" alt="BerkelyLab"/>
+    <img src="https://github.com/dward118/NL-Website/blob/dev/frontend/src/assets/berkeley.png?raw=true" alt="BerkelyLab" width="100" height="100"/>
   </div>
   <div class="rightLogo">
-    <img src="frontend\src\assets\afit.png" alt="AFIT"/>
+    <img src="https://github.com/dward118/NL-Website/blob/dev/frontend/src/assets/afit.png?raw=true" alt="AFIT" width="300" height="100"/>
   </div>
 </template>
 
