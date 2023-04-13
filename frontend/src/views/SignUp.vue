@@ -5,12 +5,16 @@
     <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Sign Up</h1>
     <div class="field">
       <form @submit.prevent="submitForm" autocomplete="on">
-        <input type="text"     placeholder="First Name"       v-model="first_name"   autocomplete="given-name" required/>
-        <input type="text"     placeholder="Last Name"        v-model="last_name"   autocomplete="family-name" required/>
-        <input type="text"     placeholder="Username"         v-model="username"    autocomplete="username" required/>
-        <input type="email"    placeholder="Email"            v-model="email"       autocomplete="email" required/>
-        <input type="password" placeholder="Password"         v-model="password"    autocomplete="new-password" required/>
-        <input type="text"     placeholder="Institution"      v-model="institution" autocomplete="organization" required/>
+        <div class="leftBound">
+          <input type="text"     placeholder="First Name"       v-model="first_name"   autocomplete="given-name" required/>
+          <input type="text"     placeholder="Username"         v-model="username"    autocomplete="username" required/>
+          <input type="password" placeholder="Password"         v-model="password"    autocomplete="new-password" required/>
+        </div>
+        <div class="rightBound">
+          <input type="text"     placeholder="Last Name"        v-model="last_name"   autocomplete="family-name" required/>
+          <input type="email"    placeholder="Email"            v-model="email"       autocomplete="email" required/>
+          <input type="text"     placeholder="Institution"      v-model="institution" autocomplete="organization" required/>
+        </div>
         <!-- <input type="range"    placeholder="Experience Level" v-model="experience" required min="0" max="5"/> -->
         <select name="experience" v-model="experience" required>
           <option value="" disabled selected hidden>Select Your Experience</option>
@@ -114,6 +118,15 @@ export default {
   background: #00313c;
   color: #fff;
   cursor: pointer;
+}
+
+.leftBound{
+  display: inline-block;
+  margin-right: 5px;
+}
+.rightBound{
+  display: inline-block;
+  margin-left: 5px;
 }
 
 p {

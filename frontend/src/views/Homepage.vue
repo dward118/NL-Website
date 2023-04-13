@@ -53,7 +53,7 @@ p {
   margin-top: 150px;
   margin: 25px;
   width: 1000px;
-  height: 500px;
+  height: 300px;
   margin: 0 auto;
   border: 1px solid #fac62e;
   padding: 10px;

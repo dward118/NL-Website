@@ -23,6 +23,12 @@
 
   <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
+  <div class="leftLogo">
+    <img src="frontend\src\assets\berkeley.png" alt="BerkelyLab"/>
+  </div>
+  <div class="rightLogo">
+    <img src="frontend\src\assets\afit.png" alt="AFIT"/>
+  </div>
 </template>
 
 <script>
@@ -82,5 +88,13 @@ p {
   margin: 0 auto;
   border: 1px solid #00313c;
   padding: 10px;
+}
+
+.leftLogo {
+  display: inline-block;
+}
+
+.rightLogo {
+  display: inline-block;
 }
 </style>
