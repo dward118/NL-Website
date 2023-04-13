@@ -1,33 +1,42 @@
 <template>
   <MenuBar />
 
-  <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Welcome {{ this.$store.state.username }}</h1>
+  <a v-if="this.$store.state.isAuthenticated">
+    <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Welcome {{ this.$store.state.username }}!</h1>
 
-  <p class="greeting">
-    Thank you for using the NucScholar website. <br><br>
-    From this page, you can manage different aspects of your account such as: <br>
-    -<a href="#container">Changing your password.</a><br>
-    -<a href="#container">Logging out.</a><br>
-    -Toggle settings.<br>
-    -View admin controls.<br><br>
+    <p class="greeting">
+      Thank you for using the NucScholar website. <br><br>
+      From this page, you can manage different aspects of your account such as: <br>
+      -<a href="#container">Changing your password.</a><br>
+      -<a href="#container">Logging out.</a><br>
+      -Toggle settings.<br>
+      -View admin controls.<br><br>
+  
+      We appreciate your continued support!
+    </p>
+  
+    <div class="logout" id="logout">
+      <form @submit.prevent="logout">
+        <button type="submit">Logout</button>
+      </form>
+    </div>
+  
+    <div class="container" style="background-color: #aaa;" id="container">
+      <h2 style="color: #00313c; font-size: 30px;">Change your password</h2>
+      <hr style="margin-bottom: 20px; border: 1px solid #00313c;">
+      <input type="password" placeholder="Enter Your Old Password" v-model="password" autocomplete="current-password" required/>
+      <input type="password" placeholder="Enter Your New Password" v-model="password" autocomplete="current-password" required/>
+      <input type="password" placeholder="Confirm New Password" v-model="password" autocomplete="current-password" required/>
+      <button type="submit">Change</button>
+    </div>
+  </a>
+  <a v-else>
+    <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Welcome Guest!</h1>
 
-    We appreciate your continued support!
-  </p>
-
-  <div class="logout" id="logout">
-    <form @submit.prevent="logout">
-      <button type="submit">Logout</button>
-    </form>
-  </div>
-
-  <div class="container" style="background-color: #aaa;" id="container">
-    <h2 style="color: #00313c; font-size: 30px;">Change your password</h2>
-    <hr style="margin-bottom: 20px; border: 1px solid #00313c;">
-    <input type="password" placeholder="Enter Your Old Password" v-model="password" autocomplete="current-password" required/>
-    <input type="password" placeholder="Enter Your New Password" v-model="password" autocomplete="current-password" required/>
-    <input type="password" placeholder="Confirm New Password" v-model="password" autocomplete="current-password" required/>
-    <button type="submit">Change</button>
-  </div>
+    <p class="greeting">
+      You shouldn't be here...
+    </p>
+  </a>
 
   <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
