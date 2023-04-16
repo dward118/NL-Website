@@ -72,7 +72,7 @@ export default {
       axios
         .post('/api/register', formData)
         .then(response => {
-
+          console.log(response)
           this.$router.push('/login')
         })
         .catch(error => {
