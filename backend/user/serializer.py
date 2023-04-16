@@ -8,6 +8,10 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ["username", "first_name", "last_name", "email", "institution", "experience", "approved"]
 
+class RegisterSerializer(UserSerializer):
+    class Meta(UserSerializer.Meta):
+        fields = ["username", "first_name", "last_name", "email", "institution", "experience"]
+
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
@@ -23,4 +27,3 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['approved'] = user.approved
 
         return token
-    
