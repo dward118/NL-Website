@@ -12,6 +12,14 @@ class RegisterSerializer(UserSerializer):
     class Meta(UserSerializer.Meta):
         fields = ["username", "first_name", "last_name", "email", "institution", "experience"]
 
+class InstitutionSerializer(UserSerializer):
+    class Meta(UserSerializer.Meta):
+        fields = ["institution"]
+
+class ExperienceSerializer(UserSerializer):
+    class Meta(UserSerializer.Meta):
+        fields = ["experience"]
+
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):

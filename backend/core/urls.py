@@ -18,7 +18,11 @@ from django.urls import path, include
 from rest_framework_simplejwt.views import TokenRefreshView
 from rest_framework_simplejwt.views import TokenBlacklistView
 
-from user.views import RegisterView, CustomTokenObtainPairView
+from user.views import (CustomTokenObtainPairView,
+                        ExperienceView,
+                        InstitutionView,
+                        RegisterView,
+                        )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,5 +33,8 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/logout/', TokenBlacklistView.as_view(), name='token_blacklist'),
 
-    #other apps
+    path('api/change/institution', InstitutionView.as_view(), name='change institution'),
+    path('api/change/experience', ExperienceView.as_view(), name='change experience'),
+
+    #other apps... (like email for proper contact us and password change)
 ]
