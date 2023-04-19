@@ -6,6 +6,7 @@ import SignUp from './views/SignUp.vue';
 import QuestionSearch from './views/QuestionSearch.vue';
 import SemanticSearch from './views/SemanticSearch.vue';
 import AccountPage from './views/AccountPage.vue'
+import ChangePassword from './views/ChangePassword.vue';
 
 const routes = [
     {
@@ -42,6 +43,11 @@ const routes = [
         name: "AccountPage",
         component: AccountPage,
         path: "/account"
+    },
+    {
+        name: "ChangePassword",
+        component: ChangePassword,
+        path: "/change"
     },
 ];
 
