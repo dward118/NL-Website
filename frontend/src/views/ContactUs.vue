@@ -34,6 +34,7 @@ export default {
       emailjs.sendForm('service_v4pdofo', 'template_dvtn57k', this.$refs.form, 'VFoCuA7pmsGIFz8Ml')
         .then((result) => {
             console.log('SUCCESS!', result.text);
+            this.$router.push('/')
         }, (error) => {
             console.log('FAILED...', error.text);
         });

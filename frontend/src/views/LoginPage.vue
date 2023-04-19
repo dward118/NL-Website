@@ -12,6 +12,9 @@
       <p>
         <router-link to="/sign-up">Don't have an account? Sign up here.</router-link>
       </p>
+      <p>
+        <router-link to="/contact-us">Forgot Password? Contact us here.</router-link>
+      </p>
     </div>
   </div>
 
@@ -21,6 +24,7 @@
 
 <script>
 import axios from 'axios';
+
 import MenuBar from '../components/MenuBar.vue';
 
 export default {
@@ -43,17 +47,14 @@ export default {
       }
 
       axios
-        .post('/api/v1/token/login', formData)
+        .post('/api/token/', formData)
         .then(response => {
-          console.log(response)
+          const access = response.data['access']
+          const refresh = response.data['refresh']
 
-          const token = response.data.auth_token
-          this.$store.commit('setToken', token)
-          axios.defaults.headers.common['Authorization'] = "Token " + token
-          localStorage.setItem('token', token)
-
+          this.$store.commit('setToken', { access, refresh })
           this.$router.push('/')
-          
+
         })
         .catch(error => {
           console.error(e)
@@ -62,6 +63,7 @@ export default {
         })
     }
   }
+
 };
 </script>
 
