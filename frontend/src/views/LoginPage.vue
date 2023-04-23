@@ -2,11 +2,13 @@
   <div>
     <MenuBar />
 
-    <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Login</h1>
+    <u>
+      <h1 style="font-size:40px; color: #00313c; margin-top: 150px; margin-bottom: 100px;">Login</h1>
+    </u>
     <div class="field">
       <form @submit.prevent="submitForm" autocomplete="on">
-        <input type="text" placeholder="Enter Username"     v-model="username" autocomplete="username" required/>
-        <input type="password" placeholder="Enter Password" v-model="password" autocomplete="current-password" required/>
+        <input type="text" placeholder="Enter Username" v-model="username" autocomplete="username" required />
+        <input type="password" placeholder="Enter Password" v-model="password" autocomplete="current-password" required />
         <button type="submit">Login</button>
       </form>
       <p>

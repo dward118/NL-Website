@@ -1,14 +1,14 @@
 <template>
   <MenuBar />
-  
+
   <a v-if="this.$store.state.isAuthenticated">
 
     <div class="dropdown" style="margin-left: 5px; float:left; top: 100px;">
-      <button class="dropbtn">=</button>
+      <button class="dropbtn">Menu</button>
       <div class="dropdown-content" style="left:0;">
         <a href="#">Settings</a>
         <a href="#">Admin</a>
-        <a><router-link to="/change">Change Password</router-link></a>
+        <router-link to="/change">Change Password</router-link>
         <a>
           <div class="logout" id="logout">
             <form @submit.prevent="logout">
@@ -19,22 +19,26 @@
       </div>
     </div>
 
-    <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Welcome {{ this.$store.state.username }}!</h1>
+    <u>
+      <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Welcome {{ this.$store.state.username }}!</h1>
+    </u>
 
     <p class="greeting">
       Thank you for using the NucScholar website. <br><br>
-      From this page, you can manage different aspects of your account such as: <br>
-      -Changing your password.<br>
-      -Logging out.<br>
+      From the top menu, you can manage different aspects of your account such as: <br>
       -Toggle settings.<br>
-      -View admin controls.<br><br>
+      -View admin controls.<br>
+      -Change your password.<br>
+      -Log out.<br><br>
 
       We appreciate your continued support!
     </p>
 
   </a>
   <a v-else>
-    <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Welcome Guest!</h1>
+    <u>
+      <h1 style="font-size:40px; color: #00313c; margin-top: 200px;">Welcome Guest!</h1>
+    </u>
 
     <p class="greeting">
       You shouldn't be here...
@@ -84,11 +88,12 @@ export default {
 
 <style>
 .dropbtn {
-  background-color: #c9d0d1;
+  background-color: #00313c;
   color: white;
   padding: 16px;
   font-size: 16px;
-  border: none;
+  border: 1px solid #fac62e;
+  width: auto;
 }
 
 .dropdown {
@@ -106,7 +111,7 @@ export default {
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 20px 25px;
   text-decoration: none;
   display: block;
 }
@@ -120,7 +125,7 @@ export default {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #00313c;
+  background-color: #f1f1f1;
 }
 
 .greeting {
@@ -137,5 +142,4 @@ export default {
   height: 40px;
   background-color: #f1f1f1;
   cursor: pointer;
-}
-</style>
+}</style>

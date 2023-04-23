@@ -1,23 +1,28 @@
+<!-- This component is what displays the menu bar and the footer at the top and bottom of the screen respectively.-->
 <template>
+<!-- Menu items are encapsulated in a div and each element is nested in a router call to change the pages. -->
   <div class="menu-item">
     <a><router-link to="/" style="font-size: 30px; color: #fac62e; font-weight: bold;"
         onmouseover="this.style.color='aliceblue'" onmouseout="this.style.color='#fac62e'">NucScholar</router-link></a>
     <div class="menu-item-right">
-    <a><router-link to="/question">Ask a Question</router-link></a>
-    <a><router-link to="/semantic">Search by Meaning</router-link></a>
-    <a><router-link to="/contact-us">Contact Us</router-link></a>
+      <a><router-link to="/question">Ask a Question</router-link></a>
+      <a><router-link to="/semantic">Search by Meaning</router-link></a>
+      <a><router-link to="/contact-us">Contact Us</router-link></a>
 
-    <a v-if="this.$store.state.isAuthenticated">
-      <router-link to="/account">My Account</router-link>
-    </a>
-    <a v-else>
-      <router-link to="/login">Login</router-link>
-    </a>
+      <a v-if="this.$store.state.isAuthenticated">
+        <router-link to="/account">My Account</router-link>
+      </a>
+      <a v-else>
+        <router-link to="/login">Login</router-link>
+      </a>
+    </div>
   </div>
-  </div>
+
+  <!-- Footer is just a container and a message to be displayed. -->
   <footer>
     <p class="footerStyle">
-      NucScholar is an actively developing project: please <u><a><router-link to="/contact-us">contact us</router-link></a></u> us with any feedback.
+      NucScholar is an actively developing project: please <u><a><router-link to="/contact-us">contact
+            us</router-link></a></u> us with any feedback.
     </p>
   </footer>
 </template>
@@ -74,7 +79,7 @@ footer {
   font-size: small;
 }
 
-.footerStyle a{
+.footerStyle a {
   text-decoration: none;
   color: aliceblue;
 }
