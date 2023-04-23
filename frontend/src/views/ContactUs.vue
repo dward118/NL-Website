@@ -32,7 +32,12 @@ export default {
 
   methods: {
     sendEmail() {
-      emailjs.sendForm('service_v4pdofo', 'template_dvtn57k', this.$refs.form, 'VFoCuA7pmsGIFz8Ml')
+      /*
+        this needs to be completely reworked, yes you can keep using emailjs.
+        However the problem with this is that its a paid service and you have a backend.
+        There's a better way to hook this up or you could keep using emailjs and hook up the parametters again.
+      */
+      emailjs.sendForm('service', 'template', this.$refs.form, '')
         .then((result) => {
           console.log('SUCCESS!', result.text);
           this.$router.push('/')
