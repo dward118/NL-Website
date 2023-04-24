@@ -2,9 +2,12 @@
   <MenuBar />
 
   <div>
-    <h3 style="font-size:40px; color: #00313c; margin-top: 150px; margin-bottom: 80px;">NucScholar Search Engine</h3>
+    <u>
+      <h3 style="font-size:40px; color: #00313c; margin-top: 150px; margin-bottom: 80px;">NucScholar Search Engine</h3>
+    </u>
     <p>
-      Created by Walid Younes and Bethany Goldblum at the <a href="https://www.lbl.gov/">Lawrence Berkeley National Laboratory</a> and Juan Manfredi at the
+      Created by Walid Younes and Bethany Goldblum at the <a href="https://www.lbl.gov/">Lawrence Berkeley National
+        Laboratory</a> and Juan Manfredi at the
       <a href="https://www.afit.edu/">Air Force Institute of Technology.</a> Please report any problems to Walid Younes.
     </p>
     <p>
@@ -14,10 +17,12 @@
       accelerating data throughput for a wide range of applications.
     </p>
     <p>
-      Additional information about the project can be found <a href="https://nucscholar.berkeley.edu/">here</a>, along with a listing of all <a href="https://nucscholar.berkeley.edu/our-team/">project team members.</a>
+      Additional information about the project can be found <a href="https://nucscholar.berkeley.edu/">here</a>, along
+      with a listing of all <a href="https://nucscholar.berkeley.edu/our-team/">project team members.</a>
     </p>
     <p>
-      The NucScholar project is supported by the <a href="https://www.energy.gov/science/office-science">U.S. Department of Energy/Office of Science</a>
+      The NucScholar project is supported by the <a href="https://www.energy.gov/science/office-science">U.S. Department
+        of Energy/Office of Science</a>
     </p>
   </div>
 
@@ -28,10 +33,12 @@
 
   <!-- Logos. -->
   <div class="leftLogo">
-    <img src="https://github.com/dward118/NL-Website/blob/dev/frontend/src/assets/berkeley.png?raw=true" alt="BerkelyLab" width="100" height="100"/>
+    <img src="https://github.com/dward118/NL-Website/blob/dev/frontend/src/assets/berkeley.png?raw=true" alt="BerkelyLab"
+      width="100" height="100" />
   </div>
   <div class="rightLogo">
-    <img src="https://github.com/dward118/NL-Website/blob/dev/frontend/src/assets/afit.jpg?raw=true" alt="AFIT" width="200" height="100"/>
+    <img src="https://github.com/dward118/NL-Website/blob/dev/frontend/src/assets/afit.jpg?raw=true" alt="AFIT"
+      width="200" height="100" />
   </div>
   <!-- This is to create whitespace at the bottom until we have other containers. -->
   <div style="height: 200px;"></div>
@@ -76,5 +83,4 @@ p {
   display: inline-block;
   margin-top: 100px;
   margin-left: 5px;
-}
-</style>
+}</style>
